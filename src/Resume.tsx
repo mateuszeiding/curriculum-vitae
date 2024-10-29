@@ -1,7 +1,10 @@
 export default function Resume() {
-  return (
-    <>
-      <h1>Mateusz Eiding</h1>
-    </>
-  );
+    return (
+        <>
+            <div className='row'>
+                <div className='col-1'>Mateusz Eiding </div>
+                <div className='col-1'>Also Mateusz Eiding </div>
+            </div>
+        </>
+    );
 }

@@ -1,0 +1,21 @@
+$columns: 12;
+
+.container {
+    margin: auto auto;
+    width: 210mm;
+    height: 297mm;
+    padding: 0.5in;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.25in;
+}
+
+@for $i from 1 to 4 {
+    .col-#{$i} {
+        flex: $i;
+        padding: 0 0.25in;
+    }
+}

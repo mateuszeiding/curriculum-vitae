@@ -1,0 +1,64 @@
+@use 'sass:string';
+
+$spacers: (
+    1: 0.2rem,
+    2: 0.4rem,
+    3: 0.8rem,
+    4: 1.2rem,
+    5: 1.6rem,
+    6: 2.4rem,
+);
+
+@mixin spacer($attr, $key, $val) {
+    $prefix: string.slice(#{$attr}, 1, 1);
+
+    .#{$prefix}-#{$key} {
+        #{$attr}: $val;
+    }
+
+    .#{$prefix}t-#{$key} {
+        #{$attr}-top: $val;
+    }
+
+    .#{$prefix}e-#{$key} {
+        #{$attr}-right: $val;
+    }
+
+    .#{$prefix}b-#{$key} {
+        #{$attr}-bottom: $val;
+    }
+
+    .#{$prefix}s-#{$key} {
+        #{$attr}-left: $val;
+    }
+
+    .#{$prefix}x-#{$key} {
+        #{$attr}-left: $val;
+        #{$attr}-right: $val;
+    }
+
+    .#{$prefix}y-#{$key} {
+        #{$attr}-top: $val;
+        #{$attr}-bottom: $val;
+    }
+}
+
+@mixin spacer_but_better($key, $val) {
+    .gap-#{$key} {
+        gap: $val;
+    }
+
+    .row-gap-#{$key} {
+        row-gap: $val;
+    }
+
+    .column-gap-#{$key} {
+        column-gap: $val;
+    }
+}
+
+@each $key, $val in $spacers {
+    @include spacer('margin', $key, $val);
+    @include spacer('padding', $key, $val);
+    @include spacer_but_better($key, $val);
+}
