@@ -1,0 +1,35 @@
+$fw: (
+    light: 300,
+    regular: 400,
+    medium: 500,
+    bold: 700,
+);
+
+@each $key, $value in $fw {
+    .fw-#{$key} {
+        font-weight: $value;
+    }
+}
+$fs: (
+    xs: 1.2rem,
+    sm: 1.4rem,
+    base: 1.6rem,
+    lg: 1.8rem,
+    xl: 2rem,
+    xxl: 2.4rem,
+    xxxl: 3.2rem,
+);
+
+@each $key, $value in $fs {
+    .fs-#{$key} {
+        font-size: $value;
+    }
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}

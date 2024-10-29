@@ -13,6 +13,10 @@ $columns: 12;
     margin: 0 -0.25in;
 }
 
+.col {
+    padding: 0 0.25in;
+}
+
 @for $i from 1 to 4 {
     .col-#{$i} {
         flex: $i;
