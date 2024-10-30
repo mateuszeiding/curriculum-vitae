@@ -1,16 +1,24 @@
-$colors: (
+$grays: (
     ghost-white: #f8f8ff,
     ghost: #ececf2,
     light-gray: #8c8caa,
 );
 
+$blues: (
+    dark-blue: #00356f,
+);
+
 :root {
-    @each $name, $color in $colors {
+    @each $name, $color in $grays {
+        --color-#{$name}: #{$color};
+    }
+
+    @each $name, $color in $blues {
         --color-#{$name}: #{$color};
     }
 }
 
-@each $name, $color in $colors {
+@each $name, $color in $grays {
     .tx-#{$name} {
         color: var(--color-#{$name});
     }
