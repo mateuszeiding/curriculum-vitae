@@ -13,8 +13,8 @@ export default function Education() {
                 </div>
                 <div className='col-1 fw-regular text-end'>
                     {StringUtil.range(
-                        DateUtil.toLocaleDateString(new Date('2012-09-01')),
-                        DateUtil.toLocaleDateString(new Date('2016-04-30'))
+                        DateUtil.to2digMMNumericYYYY(new Date('2012-09-01')),
+                        DateUtil.to2digMMNumericYYYY(new Date('2016-04-30'))
                     )}
                 </div>
             </div>

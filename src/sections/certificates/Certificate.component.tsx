@@ -26,10 +26,10 @@ export default function Certificate({
                 </div>
                 <div className='col-1 fw-regular text-end'>
                     {StringUtil.range(
-                        DateUtil.toLocaleDateString(startDate),
+                        DateUtil.to2digMMNumericYYYY(startDate),
                         !endDate
                             ? 'No Expiration'
-                            : DateUtil.toLocaleDateString(endDate)
+                            : DateUtil.to2digMMNumericYYYY(endDate)
                     )}
                 </div>
             </div>
