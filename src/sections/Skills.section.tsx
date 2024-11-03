@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 export default function Skills() {
     return (
         <>
-            <div className='row p-relative'>
+            <div className='row p-relative mb-6'>
                 <hr />
                 <SkillCol {...technologies} />
                 <SkillCol {...languages} />
@@ -47,8 +47,8 @@ function SkillCol({ title, main, secondary }: SkillColProps) {
     }, [title]);
 
     return (
-        <div className='col-1 d-flex flex-column align-items-center'>
-            <div className='fw-medium tx-dark-cerulean z-2 bg-ghost-white px-4 mb-3'>
+        <div className='col-1 z-2 d-flex flex-column align-items-center'>
+            <div className='fw-medium tx-dark-cerulean bg-ghost-white px-4 mb-3'>
                 {title}
             </div>
             <div
