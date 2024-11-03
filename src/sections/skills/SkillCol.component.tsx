@@ -1,24 +1,15 @@
-import SectionHeader from '@/components/SectionHeader/SectionHeader.component';
-import { SectionHeaderTypeEnum } from '@/components/SectionHeader/sectionHeaderType.enum';
 import { useEffect } from 'react';
 
-export default function Skills() {
-    return (
-        <section className='row row-gap-5 p-relative'>
-            <SkillCol {...frameworks} />
-            <SkillCol {...languages} />
-            <SkillCol {...tools} />
-        </section>
-    );
-}
+import SectionHeader from '@/components/SectionHeader/SectionHeader.component';
+import { SectionHeaderTypeEnum } from '@/components/SectionHeader/sectionHeaderType.enum';
 
-type SkillColProps = {
+export type SkillColProps = {
     title: string;
     main?: string[];
     secondary?: string[];
 };
 
-function SkillCol({ title, main, secondary }: SkillColProps) {
+export default function SkillCol({ title, main, secondary }: SkillColProps) {
     useEffect(() => {
         (() => {
             const mainNode = document.getElementById(
@@ -69,21 +60,3 @@ function SkillCol({ title, main, secondary }: SkillColProps) {
         </div>
     );
 }
-
-const frameworks: SkillColProps = {
-    title: 'Frameworks',
-    main: ['React', 'React Router v6', 'Bootstrap', 'Sass'],
-    secondary: ['Vue3', 'Angular2', '.NET', 'REST', 'Stencil.js'],
-};
-
-const languages: SkillColProps = {
-    title: 'Dev languages',
-    main: ['Javascript', 'Typescript', 'HTML', 'CSS'],
-    secondary: ['C#', 'T-SQL', 'Markdown'],
-};
-
-const tools: SkillColProps = {
-    title: 'Tools',
-    main: ['Vite', 'Figma', 'Vitest', 'Zod', 'Docker', 'ESLint', 'Git'],
-    secondary: ['Azure DevOps', 'Webpack', 'Storybook', 'NPM Registry'],
-};

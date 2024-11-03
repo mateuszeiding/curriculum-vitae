@@ -1,9 +1,10 @@
 import { useRef } from 'react';
-import PersonalInfo from './sections/PersonalInfo.section';
-import Skills from './sections/Skills.section';
 import { useReactToPrint } from 'react-to-print';
-import Experience from './sections/Experience.section';
-import Certificates from './sections/Certificates.section';
+
+import PersonalInfo from './sections/personalInfo/!PersonalInfo.section';
+import Skills from './sections/skills/!Skills.section';
+import Experience from './sections/experience/!Experience.section';
+import Certificates from './sections/certificates/!Certificates.section';
 import Education from './sections/Education.section';
 import Links from './sections/Links.section';
 

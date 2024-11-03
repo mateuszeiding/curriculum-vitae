@@ -1,8 +1,12 @@
 import SectionHeader from '@/components/SectionHeader/SectionHeader.component';
 
+import { languages } from './languages.mock';
+import Language from './language.component';
+
 export default function PersonalInfo() {
     const phone = import.meta.env.VITE_PHONE;
     const email = import.meta.env.VITE_EMAIL;
+
     return (
         <section className='p-relative'>
             <SectionHeader label='Personal Info' />
@@ -41,20 +45,3 @@ export default function PersonalInfo() {
         </section>
     );
 }
-
-type LanguageProps = { name: string; level: string };
-
-function Language({ name, level }: Readonly<LanguageProps>) {
-    return (
-        <div className='row fs-sm fw-medium'>
-            <div className='col-1 d-flex justify-content-end'>
-                {level} {name}
-            </div>
-        </div>
-    );
-}
-
-const languages: LanguageProps[] = [
-    { name: 'PL', level: 'Native' },
-    { name: 'EN', level: 'B2' },
-];
