@@ -1,16 +1,10 @@
+import SectionHeader from '@/components/SectionHeader.component';
 import { DateUtil } from '../util/type/DateUtil';
 
 export default function Experience() {
     return (
         <>
-            <div className='row p-relative'>
-                <hr />
-                <div className='col z-2 d-flex flex-column bg-ghost-white'>
-                    <div className='fw-medium tx-dark-cerulean pe-4 mb-3'>
-                        Experience
-                    </div>
-                </div>
-            </div>
+            <SectionHeader labels={['Experience']} />
             {experienceData.map((experience, i, arr) => (
                 <ExperiencePerPosition
                     key={i}

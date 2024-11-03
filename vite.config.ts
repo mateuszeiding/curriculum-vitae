@@ -9,12 +9,13 @@ export default defineConfig({
         alias: {
             '@': path.resolve(__dirname, './src'),
             '@assets': path.resolve(__dirname, './src/assets'),
+            '@components': path.resolve(__dirname, './src/components'),
         },
     },
     css: {
         preprocessorOptions: {
             scss: {
-                api: 'modern-compiler', // or "modern", "legacy"
+                api: 'modern-compiler',
             },
         },
     },

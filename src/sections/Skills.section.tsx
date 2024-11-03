@@ -1,10 +1,13 @@
+import SectionHeader from '@/components/SectionHeader.component';
 import { useEffect } from 'react';
 
 export default function Skills() {
     return (
         <>
+            <SectionHeader
+                labels={[technologies.title, languages.title, tools.title]}
+            />
             <div className='row p-relative mb-6'>
-                <hr />
                 <SkillCol {...technologies} />
                 <SkillCol {...languages} />
                 <SkillCol {...tools} />
@@ -48,9 +51,6 @@ function SkillCol({ title, main, secondary }: SkillColProps) {
 
     return (
         <div className='col-1 z-2 d-flex flex-column align-items-center'>
-            <div className='fw-medium tx-dark-cerulean bg-ghost-white px-4 mb-3'>
-                {title}
-            </div>
             <div
                 id={['skill', title, 'main'].join('_')}
                 className='fs-sm d-flex flex-wrap gap-2 justify-content-center'>
