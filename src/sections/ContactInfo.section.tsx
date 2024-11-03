@@ -1,6 +1,8 @@
 import SectionHeader from '@/components/SectionHeader.component';
 
 export default function ContactInfo() {
+    const phone = import.meta.env.VITE_PHONE;
+    const email = import.meta.env.VITE_EMAIL;
     return (
         <section>
             <SectionHeader labels={['Contact Info']} />
@@ -12,24 +14,17 @@ export default function ContactInfo() {
                     <div className='fs-xs d-flex column-gap-3'>
                         <a
                             href={
+                                phone &&
                                 'tel:' +
-                                ((
-                                    import.meta.env.VITE_PHONE as
-                                        | string
-                                        | undefined
-                                )
-                                    ?.replaceAll(' ', '')
-                                    .replaceAll('-', '') ?? undefined)
+                                    phone
+                                        .replaceAll(' ', '')
+                                        .replaceAll('-', '')
                             }>
                             {import.meta.env.VITE_PHONE ?? 'undefined'}
                         </a>
                         <div className='v-divider'></div>
-                        <a
-                            href={
-                                'mailto:' +
-                                (import.meta.env.VITE_EMAIL ?? undefined)
-                            }>
-                            {import.meta.env.VITE_EMAIL ?? 'undefined'}
+                        <a href={email && 'mailto:' + email}>
+                            {email ?? 'undefined'}
                         </a>
                     </div>
                     <div className='fs-xs'>Poland, Szczecin</div>
