@@ -3,7 +3,7 @@ import { DateUtil } from '@/util/type/DateUtil';
 
 export default function Education() {
     return (
-        <>
+        <section>
             <SectionHeader labels={['Education']} />
             <div className='row fs-sm fw-medium'>
                 <div className='col-1 '>IT Technican</div>
@@ -15,6 +15,6 @@ export default function Education() {
                     {DateUtil.toLocaleDateString(new Date('2016-04-30'))}
                 </div>
             </div>
-        </>
+        </section>
     );
 }

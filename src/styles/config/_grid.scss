@@ -4,22 +4,22 @@ $columns: 12;
     margin: auto auto;
     width: 210mm;
     height: 297mm;
-    padding: 0.5in;
+    padding: 5rem 5rem;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -0.25in;
+    margin: 0 -1rem;
 }
 
 .col {
-    padding: 0 0.1in;
+    padding: 0 1rem;
 }
 
 @for $i from 1 to 4 {
     .col-#{$i} {
         flex: $i;
-        padding: 0 0.1in;
+        padding: 0 1rem;
     }
 }

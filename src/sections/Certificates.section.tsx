@@ -3,7 +3,7 @@ import { DateUtil } from '@/util/type/DateUtil';
 
 export default function Certificates() {
     return (
-        <>
+        <section>
             <SectionHeader labels={['certrificates']} />
             {certificates.map((certificate, i) => (
                 <Certificate
@@ -11,7 +11,7 @@ export default function Certificates() {
                     {...certificate}
                 />
             ))}
-        </>
+        </section>
     );
 }
 

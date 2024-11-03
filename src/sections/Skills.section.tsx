@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 
 export default function Skills() {
     return (
-        <>
+        <section>
             <SectionHeader
                 labels={[technologies.title, languages.title, tools.title]}
             />
@@ -12,7 +12,7 @@ export default function Skills() {
                 <SkillCol {...languages} />
                 <SkillCol {...tools} />
             </div>
-        </>
+        </section>
     );
 }
 

@@ -3,7 +3,7 @@ import { DateUtil } from '../util/type/DateUtil';
 
 export default function Experience() {
     return (
-        <>
+        <section>
             <SectionHeader labels={['Experience']} />
             {experienceData.map((experience, i, arr) => (
                 <ExperiencePerPosition
@@ -14,7 +14,7 @@ export default function Experience() {
                     })}
                 />
             ))}
-        </>
+        </section>
     );
 }
 

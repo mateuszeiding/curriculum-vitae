@@ -1,11 +1,13 @@
 import linkedin from '@assets/linkedin.png';
 import github from '@assets/github-dark.png';
+import SectionHeader from '@/components/SectionHeader.component';
 
 export default function ContactInfo() {
     const imgHeight =
         parseFloat(getComputedStyle(document.documentElement).fontSize) * 1.6;
     return (
-        <>
+        <section>
+            <SectionHeader labels={['Contact Info']} />
             <div className='row mb-5'>
                 <div className='col-1 d-flex justify-content-end align-items-center fs-xs'>
                     <a
@@ -61,6 +63,6 @@ export default function ContactInfo() {
                     </a>
                 </div>
             </div>
-        </>
+        </section>
     );
 }
