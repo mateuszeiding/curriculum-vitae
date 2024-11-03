@@ -20,11 +20,11 @@ export default function ContactInfo() {
                                         .replaceAll(' ', '')
                                         .replaceAll('-', '')
                             }>
-                            {import.meta.env.VITE_PHONE ?? 'undefined'}
+                            {import.meta.env.VITE_PHONE ?? 'phone'}
                         </a>
                         <div className='v-divider'></div>
                         <a href={email && 'mailto:' + email}>
-                            {email ?? 'undefined'}
+                            {email ?? 'email'}
                         </a>
                     </div>
                     <div className='fs-xs'>Poland, Szczecin</div>
