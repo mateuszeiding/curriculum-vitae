@@ -14,12 +14,12 @@ $columns: 12;
 }
 
 .col {
-    padding: 0 0.25in;
+    padding: 0 0.1in;
 }
 
 @for $i from 1 to 4 {
     .col-#{$i} {
         flex: $i;
-        padding: 0 0.25in;
+        padding: 0 0.1in;
     }
 }
