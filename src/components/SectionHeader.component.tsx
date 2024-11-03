@@ -17,13 +17,18 @@ export default function SectionHeader({
                 'row fw-medium tx-dark-cerulean p-relative',
                 reverse && 'justify-content-end'
             )}>
-            <hr />
+            <hr
+                className={cls(
+                    isMultiple && 'mx-4',
+                    reverse && 'me-6',
+                    !reverse && !isMultiple && 'ms-6'
+                )}
+            />
             {labels.map((label) => (
                 <div
                     key={label}
                     className={cls(
                         'z-2 d-flex flex-column',
-                        reverse ? 'pe-0' : !isMultiple && 'ps-0',
                         isMultiple ? 'col-1' : 'col',
                         isMultiple && 'align-items-center',
                         reverse && 'align-self-end'

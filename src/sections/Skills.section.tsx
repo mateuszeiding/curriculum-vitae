@@ -71,7 +71,7 @@ function SkillCol({ title, main, secondary }: SkillColProps) {
 }
 
 const technologies: SkillColProps = {
-    title: 'Frameworks/Libraries',
+    title: 'Frameworks',
     main: ['React', 'React Router v6', 'Bootstrap'],
     secondary: ['Vue3', 'Angular2', '.NET', 'Stencil.js'],
 };
@@ -83,7 +83,7 @@ const languages: SkillColProps = {
 };
 
 const tools: SkillColProps = {
-    title: 'Tools/Platforms',
+    title: 'Tools',
     main: ['Vite', 'Figma', 'Vitest', 'Docker', 'Git', 'NPM'],
     secondary: ['Azure DevOps', 'Webpack', 'Storybook'],
 };
