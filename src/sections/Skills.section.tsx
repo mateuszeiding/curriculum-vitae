@@ -5,10 +5,10 @@ export default function Skills() {
     return (
         <section>
             <SectionHeader
-                labels={[technologies.title, languages.title, tools.title]}
+                labels={[frameworks.title, languages.title, tools.title]}
             />
             <div className='row p-relative'>
-                <SkillCol {...technologies} />
+                <SkillCol {...frameworks} />
                 <SkillCol {...languages} />
                 <SkillCol {...tools} />
             </div>
@@ -70,7 +70,7 @@ function SkillCol({ title, main, secondary }: SkillColProps) {
     );
 }
 
-const technologies: SkillColProps = {
+const frameworks: SkillColProps = {
     title: 'Frameworks',
     main: ['React', 'React Router v6', 'Bootstrap'],
     secondary: ['Vue3', 'Angular2', '.NET', 'Stencil.js'],
