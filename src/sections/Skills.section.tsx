@@ -5,8 +5,8 @@ export default function Skills() {
         <>
             <div className='row p-relative'>
                 <hr />
-                <SkillCol {...languages} />
                 <SkillCol {...technologies} />
+                <SkillCol {...languages} />
                 <SkillCol {...tools} />
             </div>
         </>
@@ -15,62 +15,75 @@ export default function Skills() {
 
 type SkillColProps = {
     title: string;
-    content?: string[];
+    main?: string[];
+    secondary?: string[];
 };
 
-function SkillCol({ title, content }: SkillColProps) {
+function SkillCol({ title, main, secondary }: SkillColProps) {
     useEffect(() => {
         (() => {
-            const node = document.getElementById(['skill', title].join('_'));
-            if (!node) return;
+            const mainNode = document.getElementById(
+                ['skill', title, 'main'].join('_')
+            );
+            const secondaryNode = document.getElementById(
+                ['skill', title, 'secondary'].join('_')
+            );
 
-            const children = Array.from(node.children) as HTMLElement[];
+            [mainNode, secondaryNode].forEach((node) => {
+                if (!node) return;
 
-            children.forEach((skill, i, arr) => {
-                if (
-                    skill.getBoundingClientRect().y ===
-                    arr[i + 1]?.getBoundingClientRect().y
-                ) {
-                    skill.classList.add('sep-1');
-                }
+                const children = Array.from(node.children) as HTMLElement[];
+
+                children.forEach((skill, i, arr) => {
+                    if (
+                        skill.getBoundingClientRect().y ===
+                        arr[i + 1]?.getBoundingClientRect().y
+                    ) {
+                        skill.classList.add('sep-1');
+                    }
+                });
             });
         })();
     }, [title]);
 
     return (
-        <div className='col-1 d-flex flex-column align-items-center gap-3'>
-            <div className='fw-medium tx-dark-cerulean z-2 bg-ghost-white px-4'>
+        <div className='col-1 d-flex flex-column align-items-center'>
+            <div className='fw-medium tx-dark-cerulean z-2 bg-ghost-white px-4 mb-3'>
                 {title}
             </div>
             <div
-                id={['skill', title].join('_')}
+                id={['skill', title, 'main'].join('_')}
+                className='fs-sm d-flex flex-wrap gap-2 justify-content-center'>
+                {main?.map((val) => <span className='sep'>{val}</span>)}
+            </div>
+            <div className='w-100 d-flex justify-content-around fs-sm px-8 tx-dark-cerulean'>
+                {Array.from(Array(3)).map(() => (
+                    <span>&bull;</span>
+                ))}
+            </div>
+            <div
+                id={['skill', title, 'secondary'].join('_')}
                 className='fs-xs d-flex flex-wrap gap-2 justify-content-center'>
-                {content?.map((val) => <span className='sep'>{val}</span>)}
+                {secondary?.map((val) => <span className='sep'>{val}</span>)}
             </div>
         </div>
     );
 }
 
-const languages: SkillColProps = {
-    title: 'Languages',
-    content: ['Javascript', 'Typescript', 'Python', 'Java', 'C++'],
+const technologies: SkillColProps = {
+    title: 'Frameworks/Libraries',
+    main: ['React', 'React Router v6', 'Bootstrap'],
+    secondary: ['Vue3', 'Angular2', '.NET', 'Stencil.js'],
 };
 
-const technologies: SkillColProps = {
-    title: 'Technologies',
-    content: [
-        'React',
-        'Node.js',
-        'Express',
-        'MongoDB',
-        'PostgreSQL',
-        'Docker',
-        'AWS',
-        'Heroku',
-    ],
+const languages: SkillColProps = {
+    title: 'Languages',
+    main: ['Javascript', 'Typescript', 'HTML', 'CSS/SCSS'],
+    secondary: ['C#', 'T-SQL'],
 };
 
 const tools: SkillColProps = {
-    title: 'Tools',
-    content: ['Git', 'VS Code', 'Postman', 'Jira', 'Confluence', 'Slack'],
+    title: 'Tools/Platforms',
+    main: ['Vite', 'Figma', 'Vitest', 'Docker', 'Git', 'NPM'],
+    secondary: ['Azure DevOps', 'Webpack', 'Storybook'],
 };

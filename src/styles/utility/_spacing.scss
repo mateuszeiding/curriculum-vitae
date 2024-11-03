@@ -7,6 +7,9 @@ $spacers: (
     4: 1.2rem,
     5: 1.6rem,
     6: 2.4rem,
+    7: 3.2rem,
+    8: 4.8rem,
+    9: 6.4rem,
 );
 
 @mixin spacer($attr, $key, $val) {
@@ -61,4 +64,12 @@ $spacers: (
     @include spacer('margin', $key, $val);
     @include spacer('padding', $key, $val);
     @include spacer_but_better($key, $val);
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.h-100 {
+    height: 100% !important;
 }
