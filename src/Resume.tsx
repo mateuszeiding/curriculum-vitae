@@ -14,7 +14,9 @@ export default function Resume() {
 
     return (
         <>
-            <button onClick={() => reactToPrintFn()}>Print</button>
+            {import.meta.env.DEV && (
+                <button onClick={() => reactToPrintFn()}>Print</button>
+            )}
             <main
                 ref={contentRef}
                 className='container bg-ghost-white d-flex flex-column row-gap-5'>
