@@ -34,6 +34,10 @@ $fs: (
     text-transform: lowercase !important;
 }
 
+.underline {
+    text-decoration: underline !important;
+}
+
 .lh-1 {
     line-height: 1 !important;
 }
@@ -48,4 +52,16 @@ $fs: (
 
 .lh-lg {
     line-height: 1.75 !important;
+}
+
+.text-start {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-end {
+    text-align: right !important;
 }
