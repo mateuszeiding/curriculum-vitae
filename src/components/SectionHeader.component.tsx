@@ -10,7 +10,7 @@ export default function SectionHeader({
 }: Readonly<SectionHeaderProps>) {
     const isMultiple = labels.length > 1;
     return (
-        <div className={cls('row fw-medium tx-dark-cerulean p-relative')}>
+        <div className='row fw-medium tx-dark-cerulean p-relative mt-6'>
             <hr />
             {labels.map((label) => (
                 <div

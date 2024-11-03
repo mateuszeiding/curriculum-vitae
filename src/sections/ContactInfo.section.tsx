@@ -57,7 +57,7 @@ export default function ContactInfo() {
                             alt='GitHub'
                             src={github}
                         />
-                        <span className='ms-3'>Resume on GitHub</span>
+                        <span className='ms-3'>Resume as a code</span>
                     </a>
                 </div>
             </div>

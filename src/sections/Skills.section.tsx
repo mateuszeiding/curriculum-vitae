@@ -7,7 +7,7 @@ export default function Skills() {
             <SectionHeader
                 labels={[technologies.title, languages.title, tools.title]}
             />
-            <div className='row p-relative mb-6'>
+            <div className='row p-relative'>
                 <SkillCol {...technologies} />
                 <SkillCol {...languages} />
                 <SkillCol {...tools} />
