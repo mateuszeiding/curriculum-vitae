@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
-import SectionHeader from '@/components/SectionHeader/SectionHeader.component';
-import { SectionHeaderTypeEnum } from '@/components/SectionHeader/sectionHeaderType.enum';
+import SectionHeader from '@/sections/_shared/SectionHeader/SectionHeader.component';
+import { SectionHeaderTypeEnum } from '@/sections/_shared/SectionHeader/sectionHeaderType.enum';
 
 export type SkillColProps = {
     title: string;

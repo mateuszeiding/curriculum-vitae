@@ -1,4 +1,4 @@
-import SectionHeader from '@/components/SectionHeader/SectionHeader.component';
+import SectionHeader from '@/sections/_shared/SectionHeader/SectionHeader.component';
 
 import { certificates } from './certificates.mock';
 import Certificate from './Certificate.component';

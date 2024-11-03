@@ -1,4 +1,4 @@
-import SectionHeader from '@/components/SectionHeader/SectionHeader.component';
+import SectionHeader from '@/sections/_shared/SectionHeader/SectionHeader.component';
 
 import { experienceData } from './experience.mock';
 import ExperiencePerPosition from './ExperiencePerPosition.component';
