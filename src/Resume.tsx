@@ -22,10 +22,10 @@ export default function Resume() {
                 className='container bg-ghost-white d-flex flex-column row-gap-5'>
                 <Links />
                 <div className='row'>
-                    <div className='col-2'>
+                    <div className='col-2 p-relative'>
                         <ContactInfo />
                     </div>
-                    <div className='col-1'>
+                    <div className='col-1 p-relative'>
                         <Languages />
                     </div>
                 </div>

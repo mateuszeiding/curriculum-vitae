@@ -1,17 +1,13 @@
-import SectionHeader from '@/components/SectionHeader.component';
+import SectionHeader from '@/components/SectionHeader/SectionHeader.component';
+import { SectionHeaderTypeEnum } from '@/components/SectionHeader/sectionHeaderType.enum';
 import { useEffect } from 'react';
 
 export default function Skills() {
     return (
-        <section>
-            <SectionHeader
-                labels={[frameworks.title, languages.title, tools.title]}
-            />
-            <div className='row p-relative'>
-                <SkillCol {...frameworks} />
-                <SkillCol {...languages} />
-                <SkillCol {...tools} />
-            </div>
+        <section className='row row-gap-5 p-relative'>
+            <SkillCol {...frameworks} />
+            <SkillCol {...languages} />
+            <SkillCol {...tools} />
         </section>
     );
 }
@@ -50,7 +46,11 @@ function SkillCol({ title, main, secondary }: SkillColProps) {
     }, [title]);
 
     return (
-        <div className='col-1 z-2 d-flex flex-column align-items-center'>
+        <div className='col-1 d-flex flex-column align-items-center'>
+            <SectionHeader
+                label={title}
+                type={SectionHeaderTypeEnum.center}
+            />
             <div
                 id={['skill', title, 'main'].join('_')}
                 className='fs-sm d-flex flex-wrap gap-2 justify-content-center'>

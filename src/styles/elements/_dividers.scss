@@ -8,10 +8,16 @@
 
 hr {
     background-color: var(--color-light-gray);
-    width: calc(100% - 2rem);
+    width: 100%;
     position: absolute;
     margin-top: 1.2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     z-index: 0;
+
+    &.multi {
+        width: calc(100% - 2rem);
+    }
 }
 
 .sep {

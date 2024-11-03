@@ -1,11 +1,11 @@
-import SectionHeader from '@/components/SectionHeader.component';
+import SectionHeader from '@/components/SectionHeader/SectionHeader.component';
 
 export default function ContactInfo() {
     const phone = import.meta.env.VITE_PHONE;
     const email = import.meta.env.VITE_EMAIL;
     return (
         <section>
-            <SectionHeader labels={['Contact Info']} />
+            <SectionHeader label='Contact Info' />
             <div className='row'>
                 <div className='col-1'>
                     <div className='uppercase fw-medium fs-sm'>

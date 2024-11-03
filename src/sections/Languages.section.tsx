@@ -1,11 +1,12 @@
-import SectionHeader from '@/components/SectionHeader.component';
+import SectionHeader from '@/components/SectionHeader/SectionHeader.component';
+import { SectionHeaderTypeEnum } from '@/components/SectionHeader/sectionHeaderType.enum';
 
 export default function Languages() {
     return (
         <section>
             <SectionHeader
-                labels={['Languages']}
-                reverse
+                label='Languages'
+                type={SectionHeaderTypeEnum.reverse}
             />
             {languages.map((lang) => (
                 <Language

@@ -1,10 +1,10 @@
-import SectionHeader from '@/components/SectionHeader.component';
+import SectionHeader from '@/components/SectionHeader/SectionHeader.component';
 import { DateUtil } from '@/util/type/DateUtil';
 
 export default function Education() {
     return (
-        <section>
-            <SectionHeader labels={['Education']} />
+        <section className='p-relative'>
+            <SectionHeader label='Education' />
             <div className='row fs-sm fw-medium'>
                 <div className='col-1 '>IT Technican</div>
                 <div className='col-1 text-center underline'>

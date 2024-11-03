@@ -1,10 +1,10 @@
-import SectionHeader from '@/components/SectionHeader.component';
+import SectionHeader from '@/components/SectionHeader/SectionHeader.component';
 import { DateUtil } from '@/util/type/DateUtil';
 
 export default function Certificates() {
     return (
-        <section>
-            <SectionHeader labels={['certrificates']} />
+        <section className='p-relative'>
+            <SectionHeader label='certrificates' />
             {certificates.map((certificate, i) => (
                 <Certificate
                     key={i}
