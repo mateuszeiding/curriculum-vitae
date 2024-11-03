@@ -72,18 +72,18 @@ function SkillCol({ title, main, secondary }: SkillColProps) {
 
 const frameworks: SkillColProps = {
     title: 'Frameworks',
-    main: ['React', 'React Router v6', 'Bootstrap'],
-    secondary: ['Vue3', 'Angular2', '.NET', 'Stencil.js'],
+    main: ['React', 'React Router v6', 'Bootstrap', 'Sass'],
+    secondary: ['Vue3', 'Angular2', '.NET', 'REST', 'Stencil.js'],
 };
 
 const languages: SkillColProps = {
-    title: 'Languages',
-    main: ['Javascript', 'Typescript', 'HTML', 'CSS/SCSS'],
-    secondary: ['C#', 'T-SQL'],
+    title: 'Dev languages',
+    main: ['Javascript', 'Typescript', 'HTML', 'CSS'],
+    secondary: ['C#', 'T-SQL', 'Markdown'],
 };
 
 const tools: SkillColProps = {
     title: 'Tools',
-    main: ['Vite', 'Figma', 'Vitest', 'Docker', 'Git', 'NPM'],
-    secondary: ['Azure DevOps', 'Webpack', 'Storybook'],
+    main: ['Vite', 'Figma', 'Vitest', 'Zod', 'Docker', 'ESLint', 'Git'],
+    secondary: ['Azure DevOps', 'Webpack', 'Storybook', 'NPM Registry'],
 };
