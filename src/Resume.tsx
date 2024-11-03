@@ -3,6 +3,7 @@ import ContactInfo from './sections/ContactInfo.section';
 import Skills from './sections/Skills.section';
 import { useReactToPrint } from 'react-to-print';
 import Experience from './sections/Experience.section';
+import Certificates from './sections/Certificates.section';
 
 export default function Resume() {
     const contentRef = useRef<HTMLDivElement>(null);
@@ -17,6 +18,7 @@ export default function Resume() {
                 <ContactInfo />
                 <Skills />
                 <Experience />
+                <Certificates />
             </main>
         </>
     );

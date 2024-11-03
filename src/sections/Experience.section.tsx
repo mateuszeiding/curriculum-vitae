@@ -22,7 +22,7 @@ type ExperiencePerPositionProps = {
     position: string;
     company: string;
     startDate: Date;
-    endDate: Date | 'Current';
+    endDate?: Date;
     bulletPoints: string[];
 };
 
@@ -40,8 +40,8 @@ function ExperiencePerPosition({
                 <div className='col-1 text-center underline'>{company}</div>
                 <div className='col-1 fw-regular text-end'>
                     {DateUtil.toLocaleDateString(startDate)} -{' '}
-                    {typeof endDate === 'string'
-                        ? endDate
+                    {!endDate
+                        ? 'Current'
                         : DateUtil.toLocaleDateString(endDate)}
                 </div>
             </div>
@@ -63,7 +63,6 @@ const experienceData: ExperiencePerPositionProps[] = [
         position: 'Software Engineer',
         company: 'TietoEVRY',
         startDate: new Date('2023-08-01'),
-        endDate: 'Current',
         bulletPoints: [
             `Refactored a React JS solution to align it with design specifications and improve its
             structure. Applied React Router Data API to simplify maintenance and enhance UI
