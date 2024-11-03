@@ -1,5 +1,6 @@
 import SectionHeader from '@/components/SectionHeader/SectionHeader.component';
 import { DateUtil } from '@/util/type/DateUtil';
+import { StringUtil } from '@/util/type/StringUtil';
 
 export default function Education() {
     return (
@@ -11,8 +12,10 @@ export default function Education() {
                     Technikum Zawodowe Zdroje
                 </div>
                 <div className='col-1 fw-regular text-end'>
-                    {DateUtil.toLocaleDateString(new Date('2012-09-01'))} -{' '}
-                    {DateUtil.toLocaleDateString(new Date('2016-04-30'))}
+                    {StringUtil.range(
+                        DateUtil.toLocaleDateString(new Date('2012-09-01')),
+                        DateUtil.toLocaleDateString(new Date('2016-04-30'))
+                    )}
                 </div>
             </div>
         </section>

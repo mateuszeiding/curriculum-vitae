@@ -26,7 +26,7 @@ export default function Links() {
                         href='https://github.com/mateuszeiding/curriculum-vitae/'
                         target='_blank'
                         className='d-flex'>
-                        <span className='me-3'>Resume as a code</span>
+                        <span className='me-3 text-end'>Resume as a code</span>
                         <img
                             height={imgHeight}
                             alt='GitHub'

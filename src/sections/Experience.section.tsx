@@ -1,5 +1,6 @@
 import SectionHeader from '@/components/SectionHeader/SectionHeader.component';
 import { DateUtil } from '../util/type/DateUtil';
+import { StringUtil } from '@/util/type/StringUtil';
 
 export default function Experience() {
     return (
@@ -37,12 +38,16 @@ function ExperiencePerPosition({
         <div className='mb-4'>
             <div className='row fs-sm fw-medium'>
                 <div className='col-1 '>{position}</div>
-                <div className='col-1 text-center underline'>{company}</div>
+                {company && (
+                    <div className='col-1 text-center underline'>{company}</div>
+                )}
                 <div className='col-1 fw-regular text-end'>
-                    {DateUtil.toLocaleDateString(startDate)} -{' '}
-                    {!endDate
-                        ? 'Current'
-                        : DateUtil.toLocaleDateString(endDate)}
+                    {StringUtil.range(
+                        DateUtil.toLocaleDateString(startDate),
+                        !endDate
+                            ? 'Current'
+                            : DateUtil.toLocaleDateString(endDate)
+                    )}
                 </div>
             </div>
             <div className='row'>

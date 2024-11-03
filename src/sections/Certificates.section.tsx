@@ -1,5 +1,6 @@
 import SectionHeader from '@/components/SectionHeader/SectionHeader.component';
 import { DateUtil } from '@/util/type/DateUtil';
+import { StringUtil } from '@/util/type/StringUtil';
 
 export default function Certificates() {
     return (
@@ -39,10 +40,12 @@ function Certificate({
                     </a>
                 </div>
                 <div className='col-1 fw-regular text-end'>
-                    {DateUtil.toLocaleDateString(startDate)} -{' '}
-                    {!endDate
-                        ? 'No Expiration'
-                        : DateUtil.toLocaleDateString(endDate)}
+                    {StringUtil.range(
+                        DateUtil.toLocaleDateString(startDate),
+                        !endDate
+                            ? 'No Expiration'
+                            : DateUtil.toLocaleDateString(endDate)
+                    )}
                 </div>
             </div>
         </div>
