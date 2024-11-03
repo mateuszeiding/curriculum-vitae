@@ -7,7 +7,7 @@ $fw: (
 
 @each $key, $value in $fw {
     .fw-#{$key} {
-        font-weight: $value;
+        font-weight: $value !important;
     }
 }
 $fs: (
@@ -22,14 +22,14 @@ $fs: (
 
 @each $key, $value in $fs {
     .fs-#{$key} {
-        font-size: $value;
+        font-size: $value !important;
     }
 }
 
 .uppercase {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
 }
 
 .lowercase {
-    text-transform: lowercase;
+    text-transform: lowercase !important;
 }

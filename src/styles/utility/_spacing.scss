@@ -13,47 +13,47 @@ $spacers: (
     $prefix: string.slice(#{$attr}, 1, 1);
 
     .#{$prefix}-#{$key} {
-        #{$attr}: $val;
+        #{$attr}: $val !important;
     }
 
     .#{$prefix}t-#{$key} {
-        #{$attr}-top: $val;
+        #{$attr}-top: $val !important;
     }
 
     .#{$prefix}e-#{$key} {
-        #{$attr}-right: $val;
+        #{$attr}-right: $val !important;
     }
 
     .#{$prefix}b-#{$key} {
-        #{$attr}-bottom: $val;
+        #{$attr}-bottom: $val !important;
     }
 
     .#{$prefix}s-#{$key} {
-        #{$attr}-left: $val;
+        #{$attr}-left: $val !important;
     }
 
     .#{$prefix}x-#{$key} {
-        #{$attr}-left: $val;
-        #{$attr}-right: $val;
+        #{$attr}-left: $val !important;
+        #{$attr}-right: $val !important;
     }
 
     .#{$prefix}y-#{$key} {
-        #{$attr}-top: $val;
-        #{$attr}-bottom: $val;
+        #{$attr}-top: $val !important;
+        #{$attr}-bottom: $val !important;
     }
 }
 
 @mixin spacer_but_better($key, $val) {
     .gap-#{$key} {
-        gap: $val;
+        gap: $val !important;
     }
 
     .row-gap-#{$key} {
-        row-gap: $val;
+        row-gap: $val !important;
     }
 
     .column-gap-#{$key} {
-        column-gap: $val;
+        column-gap: $val !important;
     }
 }
 
