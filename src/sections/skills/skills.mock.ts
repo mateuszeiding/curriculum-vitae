@@ -7,7 +7,7 @@ export const skills: SkillColProps[] = [
         secondary: ['Vue3', 'Angular2', '.NET', 'REST', 'Stencil.js'],
     },
     {
-        title: 'Dev languages',
+        title: 'Languages',
         main: ['Javascript', 'Typescript', 'HTML', 'CSS'],
         secondary: ['C#', 'T-SQL', 'Markdown'],
     },

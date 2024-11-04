@@ -18,7 +18,7 @@ export const experienceData: ExperiencePerPositionProps[] = [
         startDate: new Date('2021-07-31'),
         endDate: new Date('2023-09-01'),
         bulletPoints: [
-            `Transsferred to a new project to provide frontend expertise. Implemented feature for managing
+            `Reassigned to a new team to provide frontend expertise. Implemented feature for managing
             deeply nested data structures. Shared knowledge with team members to improve their frontend skills.`,
             `Took care of frontend in a transferred project. Worked closely with PO and Designer to 
             provide a cleaner UI and better UX, which contributed to a significant increase 
