@@ -3,7 +3,7 @@ import { SkillColProps } from './SkillCol.component';
 export const skills: SkillColProps[] = [
     {
         title: 'Frameworks',
-        main: ['React', 'React Router v6', 'Bootstrap', 'Sass'],
+        main: ['React', 'React Router', 'Bootstrap', 'Vitest', 'Sass'],
         secondary: ['Vue3', 'Angular2', '.NET', 'REST', 'Stencil.js'],
     },
     {
@@ -13,7 +13,7 @@ export const skills: SkillColProps[] = [
     },
     {
         title: 'Tools',
-        main: ['Vite', 'Figma', 'Vitest', 'Zod', 'Docker', 'ESLint', 'Git'],
+        main: ['Vite', 'Figma', 'Zod', 'Docker', 'ESLint', 'Git'],
         secondary: ['Azure DevOps', 'Webpack', 'Storybook', 'NPM Registry'],
     },
 ];
