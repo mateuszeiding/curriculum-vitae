@@ -5,7 +5,7 @@ import PersonalInfo from './sections/personalInfo/!PersonalInfo.section';
 import Skills from './sections/skills/!Skills.section';
 import Experience from './sections/experience/!Experience.section';
 import Certificates from './sections/certificates/!Certificates.section';
-import Education from './sections/Education.section';
+import Education from './sections/education/Education.section';
 import Links from './sections/Links.section';
 
 export default function Resume() {

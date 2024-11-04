@@ -1,6 +1,6 @@
-import { ExperiencePerPositionProps } from './ExperiencePerPosition.component';
+import { ExperienceDto } from '@/models/Experience.dto';
 
-export const experienceData: ExperiencePerPositionProps[] = [
+export const getExperience: ExperienceDto[] = [
     {
         position: 'Software Engineer',
         company: 'TietoEVRY',

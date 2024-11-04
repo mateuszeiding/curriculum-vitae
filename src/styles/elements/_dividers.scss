@@ -22,12 +22,12 @@ hr {
 
 .sep {
     position: relative;
-    padding: 0 0.5rem;
 
     &-1::after {
+        line-height: inherit;
         right: 0;
+        margin-right: -0.4rem;
         position: absolute;
-        margin: 0 -0.5rem;
         content: '\2223';
         color: var(--color-dark-cerulean);
     }

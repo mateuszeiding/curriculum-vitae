@@ -9,7 +9,7 @@ type AwaitProps<T> = {
 export default function Await<T>({
     promise,
     resolver,
-    fallback = <div>Loading...</div>,
+    fallback = <div className='skeleton w-25'></div>,
 }: Readonly<AwaitProps<T>>) {
     const [result, setResult] = useState<T | null>(null);
 

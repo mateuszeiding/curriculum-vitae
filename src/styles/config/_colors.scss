@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use 'sass:color';
 
 $grays: (
     ghost-white: #f8f8ff,
@@ -13,10 +14,23 @@ $blues: (
 
 $colors: map.merge($grays, $blues);
 
+@function hex-to-rgb($color) {
+    @return rgb(color.red($color), color.green($color), color.blue($color));
+}
+
 :root {
     @each $name, $color in $colors {
         --color-#{$name}: #{$color};
     }
+
+    --color-skeleton-primary: #{rgba(
+            hex-to-rgb(map.get($grays, 'light-gray')),
+            0.1
+        )};
+    --color-skeleton-secondary: #{rgba(
+            hex-to-rgb(map.get($blues, 'dark-cerulean')),
+            0.1
+        )};
 }
 
 @each $name, $color in $colors {

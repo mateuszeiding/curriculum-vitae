@@ -1,21 +1,28 @@
 import SectionHeader from '@/sections/_shared/SectionHeader/SectionHeader.component';
 
-import { experienceData } from './experience.mock';
-import ExperiencePerPosition from './ExperiencePerPosition.component';
+import Default from './Experience.component';
+import Await from '../_shared/Await.component';
+import ResumeAPI from '@/api/Resume.api';
 
 export default function Experience() {
     return (
         <section className='p-relative'>
             <SectionHeader label='Experience' />
-            {experienceData.map((experience, i, arr) => (
-                <ExperiencePerPosition
-                    key={i}
-                    {...experience}
-                    {...(arr[i - 1]?.company === experience.company && {
-                        ...{ company: '' },
-                    })}
-                />
-            ))}
+            <Await
+                promise={ResumeAPI.getExperience()}
+                fallback={<Default.Skeleton />}
+                resolver={(experience) =>
+                    experience.map((experience, i, arr) => (
+                        <Default.Component
+                            key={i}
+                            {...experience}
+                            {...(arr[i - 1]?.company === experience.company && {
+                                ...{ company: '' },
+                            })}
+                        />
+                    ))
+                }
+            />
         </section>
     );
 }

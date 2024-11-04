@@ -12,6 +12,7 @@
     "paths": {
       "@/*": ["src/*"],
         "@assets/*": ["src/assets/*"],
+        "@api/*": ["src/api/*"],
         "@components/*": ["src/components/*"],
     },
 
@@ -29,5 +30,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
   },
-  "include": ["src", "mockServiceWorker.js"]
+  "include": ["src", "public/mockServiceWorker.js"]
 }

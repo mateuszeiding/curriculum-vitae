@@ -1,19 +1,17 @@
-import { SkillColProps } from './Skill.component';
+import { SkillEnum } from '@/sections/skills/Skill.enum';
+import { SkillDto } from '@/models/Skill.dto';
 
-export const skills: SkillColProps[] = [
-    {
-        title: 'Frameworks',
+export const getSkills: Record<keyof typeof SkillEnum, SkillDto> = {
+    [SkillEnum.frameworks]: {
         main: ['React', 'React Router', 'Bootstrap', 'Vitest', 'Sass'],
         secondary: ['Vue3', 'Angular2', '.NET', 'REST', 'Stencil.js'],
     },
-    {
-        title: 'Languages',
+    [SkillEnum.languages]: {
         main: ['Javascript', 'Typescript', 'HTML', 'CSS'],
         secondary: ['C#', 'T-SQL', 'Markdown'],
     },
-    {
-        title: 'Tools',
+    [SkillEnum.tools]: {
         main: ['Vite', 'Figma', 'Zod', 'Docker', 'ESLint', 'Git'],
         secondary: ['Azure DevOps', 'Webpack', 'Storybook', 'NPM Registry'],
     },
-];
+};
