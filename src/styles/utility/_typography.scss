@@ -1,3 +1,5 @@
+@use './../mixins/media-query' as media-query;
+
 $fw: (
     light: 300,
     regular: 400,
@@ -64,4 +66,32 @@ $fs: (
 
 .text-end {
     text-align: right !important;
+}
+
+@include media-query.lg() {
+    .text-lg-start {
+        text-align: left !important;
+    }
+
+    .text-lg-center {
+        text-align: center !important;
+    }
+
+    .text-lg-end {
+        text-align: right !important;
+    }
+}
+
+@include media-query.sm() {
+    .text-sm-start {
+        text-align: left !important;
+    }
+
+    .text-sm-center {
+        text-align: center !important;
+    }
+
+    .text-sm-end {
+        text-align: right !important;
+    }
 }

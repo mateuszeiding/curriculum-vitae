@@ -6,10 +6,16 @@ type EducationComponentProps = EducationDto;
 
 export default {
     Skeleton: () => (
-        <div className='d-flex justify-content-between'>
-            <div className='skeleton w-25'></div>
-            <div className='skeleton w-25'></div>
-            <div className='skeleton w-25'></div>
+        <div className='row row-gap-2'>
+            <div className='col-sm-2 col-lg-2'>
+                <div className='skeleton w-sm-100 w-lg-75'></div>
+            </div>
+            <div className='col-sm-4 col-lg-2 d-flex justify-content-lg-center justify-content-sm-end underline'>
+                <div className='skeleton w-sm-75 w-lg-75'></div>
+            </div>
+            <div className='col-sm-3 col-lg-2 d-flex justify-content-lg-end justify-content-sm-start'>
+                <div className='skeleton w-sm-50 w-lg-50'></div>
+            </div>
         </div>
     ),
     Component: function ({
@@ -20,9 +26,11 @@ export default {
     }: Readonly<EducationComponentProps>) {
         return (
             <div className='row fs-sm fw-medium'>
-                <div className='col-2 '>{title}</div>
-                <div className='col-2 text-center underline'>{school}</div>
-                <div className='col-2 fw-regular text-end'>
+                <div className='col-lg-2 col-sm-2'>{title}</div>
+                <div className='col-lg-2 col-sm-4 text-lg-center text-sm-end underline'>
+                    {school}
+                </div>
+                <div className='col-sm-3 col-lg-2 fw-regular text-lg-end text-sm-start'>
                     {StringUtil.range(
                         DateUtil.to2digMMNumericYYYY(startDate),
                         DateUtil.to2digMMNumericYYYY(endDate)

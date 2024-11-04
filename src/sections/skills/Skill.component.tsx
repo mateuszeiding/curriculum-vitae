@@ -15,7 +15,7 @@ export default {
         const { mainId, secondaryId } = useSkillDivider(skill);
 
         return (
-            <div className='col-2 d-flex flex-column align-items-center'>
+            <div className='col-lg-2 col-sm-6 d-flex flex-column align-items-center'>
                 <SectionHeader
                     label={skill}
                     type={SectionHeaderTypeEnum.center}
@@ -27,7 +27,7 @@ export default {
                         <div
                             key={i}
                             className={cls(
-                                'w-50 lh-1 d-flex justify-content-center ps-2 sep'
+                                'w-sm-25 w-lg-50 lh-1 d-flex justify-content-center ps-2 sep'
                             )}>
                             <div className='skeleton w-75'></div>
                         </div>
@@ -45,7 +45,7 @@ export default {
                         <div
                             key={i}
                             className={cls(
-                                'w-25 d-flex lh-1 justify-content-center ps-2 sep'
+                                'w-sm-10 w-lg-25 d-flex lh-1 justify-content-center ps-2 sep'
                             )}>
                             <div className='skeleton w-75'></div>
                         </div>
@@ -58,7 +58,7 @@ export default {
         const { mainId, secondaryId } = useSkillDivider(title);
 
         return (
-            <div className='col-2 d-flex flex-column align-items-center'>
+            <div className='col-lg-2 col-sm-6 d-flex flex-column align-items-center'>
                 <SectionHeader
                     label={title}
                     type={SectionHeaderTypeEnum.center}

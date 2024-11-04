@@ -1,3 +1,5 @@
+@use './../mixins/media-query' as media-query;
+
 $columns: 6;
 
 .container {
@@ -25,15 +27,25 @@ $columns: 6;
     padding: 0 1.2rem;
 }
 
+@mixin col($i) {
+    width: calc(100% / #{$columns} * #{$i});
+    padding: 0 1.2rem;
+}
+
 @for $i from 1 to $columns + 1 {
     .col-#{$i} {
-        width: calc(100% / #{$columns} * #{$i});
-        padding: 0 1.2rem;
+        @include col($i);
     }
 
-    .row-cols-#{$i} {
-        .col {
-            width: calc(100% / #{$columns} * #{$i});
+    @include media-query.lg() {
+        .col-lg-#{$i} {
+            @include col($i);
+        }
+    }
+
+    @include media-query.sm() {
+        .col-sm-#{$i} {
+            @include col($i);
         }
     }
 }

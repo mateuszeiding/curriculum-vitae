@@ -10,9 +10,13 @@ export type CertificateProps = {
 
 export default {
     Skeletion: () => (
-        <div className='d-flex justify-content-between'>
-            <div className='skeleton w-25'></div>
-            <div className='skeleton w-25'></div>
+        <div className='row row-gap-2 d-flex justify-content-between'>
+            <div className='col'>
+                <div className='skeleton w-sm-50 w-lg-50'></div>
+            </div>
+            <div className='col-sm-6 col-lg-2 d-flex justify-content-lg-end justify-content-sm-start'>
+                <div className='skeleton w-sm-25 w-lg-50'></div>
+            </div>
         </div>
     ),
     Component: function ({
@@ -31,7 +35,7 @@ export default {
                             {name}
                         </a>
                     </div>
-                    <div className='col-2 fw-regular text-end'>
+                    <div className='col-lg-2 col-sm-6 fw-regular text-lg-end text-sm-start'>
                         {StringUtil.range(
                             DateUtil.to2digMMNumericYYYY(startDate),
                             !endDate

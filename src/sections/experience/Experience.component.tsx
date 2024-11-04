@@ -7,13 +7,19 @@ export type ExperiencePerPositionProps = ExperienceDto;
 export default {
     Skeleton: () => (
         <div>
-            <div className='d-flex justify-content-between mb-4'>
-                <div className='skeleton w-25'></div>
-                <div className='skeleton w-25'></div>
-                <div className='skeleton w-25'></div>
+            <div className='row row-gap-2 mb-4'>
+                <div className='col'>
+                    <div className='skeleton w-sm-100 w-lg-75'></div>
+                </div>
+                <div className='col-lg-2 col-sm-4 d-flex justify-content-lg-center justify-content-sm-end'>
+                    <div className='skeleton w-sm-50 w-lg-75'></div>
+                </div>
+                <div className='col-lg-2 col-sm-6 d-flex justify-content-lg-end justify-content-sm-start'>
+                    <div className='skeleton w-sm-25 w-lg-50'></div>
+                </div>
             </div>
-            <ul>
-                <li>
+            <ul className='row'>
+                <li className='col-6'>
                     <div className='skeleton w-100 mt-1 mb-2'></div>
                     <div className='skeleton w-75'></div>
                 </li>
@@ -30,13 +36,13 @@ export default {
         return (
             <div className='mb-4'>
                 <div className='row fs-sm fw-medium'>
-                    <div className='col '>{position}</div>
+                    <div className='col'>{position}</div>
                     {company && (
-                        <div className='col-2 text-center underline'>
+                        <div className='col-lg-2 col-sm-3 text-lg-center text-sm-end underline'>
                             {company}
                         </div>
                     )}
-                    <div className='col-2 fw-regular text-end'>
+                    <div className='col-lg-2 col-sm-6 fw-regular text-lg-end text-sm-start'>
                         {StringUtil.range(
                             DateUtil.to2digMMNumericYYYY(startDate),
                             !endDate

@@ -1,10 +1,4 @@
-.d-flex {
-    display: flex !important;
-}
-
-.d-inline-flex {
-    display: inline-flex !important;
-}
+@use './../mixins/media-query' as media-query;
 
 .flex-row {
     flex-direction: row !important;
@@ -12,6 +6,26 @@
 
 .flex-column {
     flex-direction: column !important;
+}
+
+@include media-query.lg() {
+    .flex-lg-row {
+        flex-direction: row !important;
+    }
+
+    .flex-lg-column {
+        flex-direction: column !important;
+    }
+}
+
+@include media-query.sm() {
+    .flex-sm-row {
+        flex-direction: row !important;
+    }
+
+    .flex-sm-column {
+        flex-direction: column !important;
+    }
 }
 
 .flex-wrap {
@@ -72,6 +86,50 @@
 
 .justify-content-around {
     justify-content: space-around !important;
+}
+
+@include media-query.lg() {
+    .justify-content-lg-center {
+        justify-content: center !important;
+    }
+
+    .justify-content-lg-start {
+        justify-content: flex-start !important;
+    }
+
+    .justify-content-lg-end {
+        justify-content: flex-end !important;
+    }
+
+    .justify-content-lg-between {
+        justify-content: space-between !important;
+    }
+
+    .justify-content-lg-around {
+        justify-content: space-around !important;
+    }
+}
+
+@include media-query.sm() {
+    .justify-content-sm-center {
+        justify-content: center !important;
+    }
+
+    .justify-content-sm-start {
+        justify-content: flex-start !important;
+    }
+
+    .justify-content-sm-end {
+        justify-content: flex-end !important;
+    }
+
+    .justify-content-sm-between {
+        justify-content: space-between !important;
+    }
+
+    .justify-content-sm-around {
+        justify-content: space-around !important;
+    }
 }
 
 .flex-1 {

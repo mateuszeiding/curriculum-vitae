@@ -1,6 +1,39 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+
+enum ViewportSizeEnum {
+    desktop = 'desktop',
+    mobile = 'mobile',
+}
+
+function getViewportSize() {
+    return window.innerWidth > 800
+        ? ViewportSizeEnum.desktop
+        : ViewportSizeEnum.mobile;
+}
+
+const createDividers = (mainId: string, secondaryId: string) => {
+    const mainNode = document.getElementById(mainId);
+    const secondaryNode = document.getElementById(secondaryId);
+
+    [mainNode, secondaryNode].forEach((node) => {
+        if (!node) return;
+
+        const children = Array.from(node.children) as HTMLElement[];
+
+        children.forEach((skill, i, arr) => {
+            if (
+                skill.getBoundingClientRect().y ===
+                arr[i + 1]?.getBoundingClientRect().y
+            ) {
+                skill.classList.add('sep-1');
+            }
+        });
+    });
+};
 
 export const useSkillDivider = (title: string) => {
+    const [viewportSize, setViewportSize] = useState(() => getViewportSize());
+
     const ids = useMemo(
         () => ({
             mainId: ['skill', title, 'main'].join('_'),
@@ -10,26 +43,18 @@ export const useSkillDivider = (title: string) => {
     );
 
     useEffect(() => {
-        (() => {
-            const mainNode = document.getElementById(ids.mainId);
-            const secondaryNode = document.getElementById(ids.secondaryId);
+        const observer = new ResizeObserver(() => {
+            if (viewportSize === getViewportSize()) return;
 
-            [mainNode, secondaryNode].forEach((node) => {
-                if (!node) return;
+            createDividers(ids.mainId, ids.secondaryId);
+            setViewportSize(getViewportSize());
+        });
 
-                const children = Array.from(node.children) as HTMLElement[];
+        observer.observe(document.body);
+        createDividers(ids.mainId, ids.secondaryId);
 
-                children.forEach((skill, i, arr) => {
-                    if (
-                        skill.getBoundingClientRect().y ===
-                        arr[i + 1]?.getBoundingClientRect().y
-                    ) {
-                        skill.classList.add('sep-1');
-                    }
-                });
-            });
-        })();
-    }, [title, ids]);
+        return () => observer.disconnect();
+    }, [ids, viewportSize]);
 
     return ids;
 };
