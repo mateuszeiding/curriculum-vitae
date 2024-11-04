@@ -37,7 +37,7 @@ export default function SkillCol({ title, main, secondary }: SkillColProps) {
     }, [title]);
 
     return (
-        <div className='col-1 d-flex flex-column align-items-center'>
+        <div className='col-2 d-flex flex-column align-items-center'>
             <SectionHeader
                 label={title}
                 type={SectionHeaderTypeEnum.center}

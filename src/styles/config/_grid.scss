@@ -1,4 +1,4 @@
-$columns: 12;
+$columns: 6;
 
 .container {
     margin: auto auto;
@@ -16,16 +16,24 @@ $columns: 12;
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -1rem;
+    margin: 0 -1.2rem;
 }
 
 .col {
-    padding: 0 1rem;
+    display: flex;
+    flex-grow: 1;
+    padding: 0 1.2rem;
 }
 
-@for $i from 1 to 4 {
+@for $i from 1 to $columns + 1 {
     .col-#{$i} {
-        flex: $i;
-        padding: 0 1rem;
+        width: calc(100% / #{$columns} * #{$i});
+        padding: 0 1.2rem;
+    }
+
+    .row-cols-#{$i} {
+        .col {
+            width: calc(100% / #{$columns} * #{$i});
+        }
     }
 }

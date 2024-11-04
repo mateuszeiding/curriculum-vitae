@@ -8,7 +8,7 @@ export default function Links() {
     return (
         <section>
             <div className='row fs-xs'>
-                <div className='col-1 d-flex'>
+                <div className='col-3 d-flex'>
                     <a
                         href='https://www.linkedin.com/in/mateusz-eiding/'
                         target='_blank'
@@ -21,7 +21,7 @@ export default function Links() {
                         <span className='ms-3'>LinkedIn profile</span>
                     </a>
                 </div>
-                <div className='col-1 d-flex justify-content-end'>
+                <div className='col-3 d-flex justify-content-end'>
                     <a
                         href='https://github.com/mateuszeiding/curriculum-vitae/'
                         target='_blank'

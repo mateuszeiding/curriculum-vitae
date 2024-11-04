@@ -18,14 +18,7 @@ export default function SectionHeader({
                 'row fw-medium tx-dark-cerulean',
                 type === SectionHeaderTypeEnum.reverse && 'justify-content-end'
             )}>
-            <div
-                className={cls(
-                    'd-flex flex-column',
-                    type === SectionHeaderTypeEnum.center ? 'col-1' : 'col',
-                    type === SectionHeaderTypeEnum.center &&
-                        'align-items-center',
-                    type === SectionHeaderTypeEnum.reverse && 'align-self-end'
-                )}>
+            <div className='col d-flex flex-column'>
                 <hr
                     className={cls(
                         type === SectionHeaderTypeEnum.reverse && 'right-0',
@@ -35,10 +28,13 @@ export default function SectionHeader({
                 />
                 <div
                     className={cls(
-                        'z-2 mb-3 bg-ghost-white',
-                        type === SectionHeaderTypeEnum.center && 'px-4',
-                        type === SectionHeaderTypeEnum.reverse && 'ps-4',
-                        type === SectionHeaderTypeEnum.normal && 'pe-4'
+                        'z-2 mb-3 bg-ghost-white flex-shrink-0',
+                        type === SectionHeaderTypeEnum.center &&
+                            'px-4 align-self-center',
+                        type === SectionHeaderTypeEnum.reverse &&
+                            'ps-4 align-self-end',
+                        type === SectionHeaderTypeEnum.normal &&
+                            'pe-4 align-self-start'
                     )}>
                     {StringUtil.capitalizeFirstLetter(label)}
                 </div>

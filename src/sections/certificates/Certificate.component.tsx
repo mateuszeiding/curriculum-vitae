@@ -17,14 +17,14 @@ export default function Certificate({
     return (
         <div className='mb-4'>
             <div className='row fs-sm fw-medium'>
-                <div className='col-2'>
+                <div className='col'>
                     <a
                         target='_blank'
                         href={link}>
                         {name}
                     </a>
                 </div>
-                <div className='col-1 fw-regular text-end'>
+                <div className='col-2 fw-regular text-end'>
                     {StringUtil.range(
                         DateUtil.to2digMMNumericYYYY(startDate),
                         !endDate

@@ -19,11 +19,11 @@ export default function ExperiencePerPosition({
     return (
         <div className='mb-4'>
             <div className='row fs-sm fw-medium'>
-                <div className='col-1 '>{position}</div>
+                <div className='col '>{position}</div>
                 {company && (
-                    <div className='col-1 text-center underline'>{company}</div>
+                    <div className='col-2 text-center underline'>{company}</div>
                 )}
-                <div className='col-1 fw-regular text-end'>
+                <div className='col-2 fw-regular text-end'>
                     {StringUtil.range(
                         DateUtil.to2digMMNumericYYYY(startDate),
                         !endDate
@@ -33,7 +33,7 @@ export default function ExperiencePerPosition({
                 </div>
             </div>
             <div className='row'>
-                <div className='col-1'>
+                <div className='col-6'>
                     <ul>
                         {bulletPoints.map((bulletPoint, i) => (
                             <li key={i}>{bulletPoint}</li>

@@ -11,7 +11,7 @@ export default function PersonalInfo() {
         <section className='p-relative'>
             <SectionHeader label='Personal Info' />
             <div className='row'>
-                <div className='col-2'>
+                <div className='col-4'>
                     <div className='uppercase fw-medium fs-sm'>
                         Mateusz Eiding
                     </div>
@@ -33,7 +33,7 @@ export default function PersonalInfo() {
                     </div>
                     <div className='fs-xs'>Poland, Szczecin</div>
                 </div>
-                <div className='col-1'>
+                <div className='col-2'>
                     {languages.map((lang) => (
                         <Language
                             key={lang.name}
