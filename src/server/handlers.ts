@@ -26,7 +26,6 @@ export const handlers = [
     }),
     http.get('/api/resume/list/certificate', async () => {
         await delayResponse();
-        await delay(100000);
         return HttpResponse.json(getCertificates, getJsonInit);
     }),
     http.get('/api/resume/list/education', async () => {
