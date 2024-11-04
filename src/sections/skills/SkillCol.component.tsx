@@ -45,7 +45,7 @@ export default function SkillCol({ title, main, secondary }: SkillColProps) {
             <div
                 id={['skill', title, 'main'].join('_')}
                 className='fs-sm d-flex flex-wrap gap-2 justify-content-center'>
-                {main?.map((val) => <span className='sep'>{val}</span>)}
+                {main?.sort().map((val) => <span className='sep'>{val}</span>)}
             </div>
             <div className='w-100 d-flex justify-content-around fs-sm px-8 tx-dark-cerulean'>
                 {Array.from(Array(3)).map(() => (
@@ -55,7 +55,9 @@ export default function SkillCol({ title, main, secondary }: SkillColProps) {
             <div
                 id={['skill', title, 'secondary'].join('_')}
                 className='fs-xs d-flex flex-wrap gap-2 justify-content-center'>
-                {secondary?.map((val) => <span className='sep'>{val}</span>)}
+                {secondary
+                    ?.sort()
+                    .map((val) => <span className='sep'>{val}</span>)}
             </div>
         </div>
     );
