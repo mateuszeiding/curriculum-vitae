@@ -4,19 +4,19 @@ export const experienceData: ExperiencePerPositionProps[] = [
     {
         position: 'Software Engineer',
         company: 'TietoEVRY',
-        startDate: new Date('2023-08-01'),
+        startDate: new Date('2023-07-01'),
         bulletPoints: [
             `Refactoring heheh`,
             `Together with the designers team planned department-wide rebranding. Basing on Figma documentation
             built libraries that include new design new system as style framework, web components and font-glyphs that were
-            later shared and used by multiple teams.`,
+            later used in over 20 projects.`,
         ],
     },
     {
         position: 'Junior Software Engineer',
         company: 'TietoEVRY',
         startDate: new Date('2021-07-31'),
-        endDate: new Date('2023-09-01'),
+        endDate: new Date('2023-06-30'),
         bulletPoints: [
             `Reassigned to a new team to provide frontend expertise. Implemented feature for managing
             deeply nested data structures. Shared knowledge with team members to improve their frontend skills.`,

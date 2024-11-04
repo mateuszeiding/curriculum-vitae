@@ -28,7 +28,7 @@ export default function Certificate({
                     {StringUtil.range(
                         DateUtil.to2digMMNumericYYYY(startDate),
                         !endDate
-                            ? 'No Expiration'
+                            ? 'No Exp.'
                             : DateUtil.to2digMMNumericYYYY(endDate)
                     )}
                 </div>
