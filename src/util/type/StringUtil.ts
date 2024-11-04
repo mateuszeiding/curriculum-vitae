@@ -4,6 +4,6 @@ export class StringUtil {
     }
 
     static range(start: string, end: string) {
-        return [start, end].join(window.innerWidth > 600 ? ' - ' : ' ');
+        return [start, end].join(' - ');
     }
 }
