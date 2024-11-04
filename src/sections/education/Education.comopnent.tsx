@@ -26,11 +26,11 @@ export default {
     }: Readonly<EducationComponentProps>) {
         return (
             <div className='row fs-sm fw-medium'>
-                <div className='col-lg-2 col-sm-2'>{title}</div>
-                <div className='col-lg-2 col-sm-4 text-lg-center text-sm-end underline'>
+                <div className='col-lg-2 col-sm-3'>{title}</div>
+                <div className='col-lg-2 col-sm-3 text-lg-center text-sm-end underline'>
                     {school}
                 </div>
-                <div className='col-sm-3 col-lg-2 fw-regular text-lg-end text-sm-start'>
+                <div className='col-sm-6 col-lg-2 fw-regular text-lg-end text-sm-start'>
                     {StringUtil.range(
                         DateUtil.to2digMMNumericYYYY(startDate),
                         DateUtil.to2digMMNumericYYYY(endDate)
