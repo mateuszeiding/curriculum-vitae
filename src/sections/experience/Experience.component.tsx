@@ -36,12 +36,10 @@ export default {
         return (
             <div className='mb-4'>
                 <div className='row fs-sm fw-medium'>
-                    <div className='col'>{position}</div>
-                    {company && (
-                        <div className='col-lg-2 col-sm-3 text-lg-center text-sm-end underline'>
-                            {company}
-                        </div>
-                    )}
+                    <div className='col-lg-2 col-sm-3'>{position}</div>
+                    <div className='col-lg-2 col-sm-3 text-lg-center text-sm-end underline'>
+                        {company}
+                    </div>
                     <div className='col-lg-2 col-sm-6 fw-regular text-lg-end text-sm-start'>
                         {StringUtil.range(
                             DateUtil.to2digMMNumericYYYY(startDate),
