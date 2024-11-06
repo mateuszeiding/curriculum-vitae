@@ -1,5 +1,6 @@
 import linkedin from '@assets/linkedin.png';
 import github from '@assets/github-dark.png';
+import vercel from '@assets/vercel-dark.png';
 
 export default function Links() {
     const imgHeight =
@@ -22,17 +23,35 @@ export default function Links() {
                     </a>
                 </div>
                 <div className='col-3 d-flex justify-content-end'>
-                    <a
-                        href='https://github.com/mateuszeiding/curriculum-vitae/'
-                        target='_blank'
-                        className='d-flex'>
-                        <span className='me-3 text-end'>Resume as a code</span>
-                        <img
-                            height={imgHeight}
-                            alt='GitHub'
-                            src={github}
-                        />
-                    </a>
+                    {import.meta.env.PROD ? (
+                        <a
+                            href='https://github.com/mateuszeiding/curriculum-vitae/'
+                            target='_blank'
+                            className='d-flex'>
+                            <span className='me-3 text-end'>
+                                Resume as a code
+                            </span>
+                            <img
+                                height={imgHeight}
+                                alt='GitHub'
+                                src={github}
+                            />
+                        </a>
+                    ) : (
+                        <a
+                            href='https://mateusz-eiding-cv.vercel.app/'
+                            target='_blank'
+                            className='d-flex'>
+                            <span className='me-3 text-end'>
+                                Resume as an web app
+                            </span>
+                            <img
+                                height={imgHeight}
+                                alt='Vercel'
+                                src={vercel}
+                            />
+                        </a>
+                    )}
                 </div>
             </div>
         </section>
