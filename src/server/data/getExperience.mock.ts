@@ -6,7 +6,15 @@ export const getExperience: ExperienceDto[] = [
         company: 'TietoEVRY',
         startDate: new Date('2023-07-01'),
         bulletPoints: [
-            `Refactoring heheh`,
+            `Together with the designers team planned department-wide rebranding. Basing on Figma documentation
+            built libraries that include new design new system as style framework, web components and font-glyphs that were
+            later used in over 20 projects.`,
+            `Together with the designers team planned department-wide rebranding. Basing on Figma documentation
+            built libraries that include new design new system as style framework, web components and font-glyphs that were
+            later used in over 20 projects.`,
+            `Together with the designers team planned department-wide rebranding. Basing on Figma documentation
+            built libraries that include new design new system as style framework, web components and font-glyphs that were
+            later used in over 20 projects.`,
             `Together with the designers team planned department-wide rebranding. Basing on Figma documentation
             built libraries that include new design new system as style framework, web components and font-glyphs that were
             later used in over 20 projects.`,

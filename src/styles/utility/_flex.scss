@@ -28,6 +28,16 @@
     }
 }
 
+@media print {
+    .flex-print-row {
+        flex-direction: row !important;
+    }
+
+    .flex-print-column {
+        flex-direction: column !important;
+    }
+}
+
 .flex-wrap {
     flex-wrap: wrap !important;
 }
@@ -128,6 +138,28 @@
     }
 
     .justify-content-sm-around {
+        justify-content: space-around !important;
+    }
+}
+
+@media print {
+    .justify-content-print-center {
+        justify-content: center !important;
+    }
+
+    .justify-content-print-start {
+        justify-content: flex-start !important;
+    }
+
+    .justify-content-print-end {
+        justify-content: flex-end !important;
+    }
+
+    .justify-content-print-between {
+        justify-content: space-between !important;
+    }
+
+    .justify-content-print-around {
         justify-content: space-around !important;
     }
 }

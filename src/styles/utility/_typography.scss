@@ -95,3 +95,17 @@ $fs: (
         text-align: right !important;
     }
 }
+
+@media print {
+    .text-print-start {
+        text-align: left !important;
+    }
+
+    .text-print-center {
+        text-align: center !important;
+    }
+
+    .text-print-end {
+        text-align: right !important;
+    }
+}

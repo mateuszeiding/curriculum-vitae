@@ -49,3 +49,11 @@ $columns: 6;
         }
     }
 }
+
+@media print {
+    @for $i from 1 to $columns + 1 {
+        .col-print-#{$i} {
+            @include col($i);
+        }
+    }
+}

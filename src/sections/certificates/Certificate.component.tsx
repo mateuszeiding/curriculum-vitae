@@ -35,7 +35,7 @@ export default {
                             {name}
                         </a>
                     </div>
-                    <div className='col-lg-2 col-sm-6 fw-regular text-lg-end text-sm-start'>
+                    <div className='col-lg-2 col-print-2 col-sm-6 fw-regular text-lg-end text-print-end text-sm-start'>
                         {StringUtil.range(
                             DateUtil.to2digMMNumericYYYY(startDate),
                             !endDate

@@ -58,7 +58,7 @@ export default {
         const { mainId, secondaryId } = useSkillDivider(title);
 
         return (
-            <div className='col-lg-2 col-sm-6 d-flex flex-column align-items-center'>
+            <div className='col-lg-2 col-sm-6 col-print-2 d-flex flex-column align-items-center'>
                 <SectionHeader
                     label={title}
                     type={SectionHeaderTypeEnum.center}
