@@ -6,17 +6,19 @@ export const getExperience: ExperienceDto[] = [
         company: 'TietoEVRY',
         startDate: new Date('2023-07-01'),
         bulletPoints: [
-            `Together with the designers team planned department-wide rebranding. Basing on Figma documentation
-            built libraries that include new design new system as style framework, web components and font-glyphs that were
-            later used in over 20 projects.`,
-            `Together with the designers team planned department-wide rebranding. Basing on Figma documentation
-            built libraries that include new design new system as style framework, web components and font-glyphs that were
-            later used in over 20 projects.`,
-            `Together with the designers team planned department-wide rebranding. Basing on Figma documentation
-            built libraries that include new design new system as style framework, web components and font-glyphs that were
-            later used in over 20 projects.`,
-            `Together with the designers team planned department-wide rebranding. Basing on Figma documentation
-            built libraries that include new design new system as style framework, web components and font-glyphs that were
+            `Managed refactoring and rebranding of application for task management. Moved most of internal data states to
+            loaders and routes to provide more cloud-friendly solution and reduce prop drilling. Simplifications taken across
+            the project resulted in ~30% code reduction.
+            `,
+            `OLD: Implemented a new design system in one of the React JS application modules. Converted
+            reusable class components to functional headless components to share business logic across
+            both new and existing UI.`,
+            `Joined the internship program as a mentor, providing guidance and support in frontend development 
+            to ensure accurate design implementation. Helped make design concepts clear and understandable for 
+            developers and encouraged effective collaboration between design and development teams.
+            `,
+            `Together with the designers team planned new department-wide design system. Basing on prepared Figma documentation
+            built libraries that include style framework, web components and font-glyphs that were
             later used in over 20 projects.`,
         ],
     },
