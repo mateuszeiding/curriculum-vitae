@@ -10,9 +10,9 @@ export const getExperience: ExperienceDto[] = [
             loaders and routes to provide more cloud-friendly solution and reduce prop drilling. Simplifications taken across
             the project resulted in ~30% code reduction.
             `,
-            `OLD: Implemented a new design system in one of the React JS application modules. Converted
-            reusable class components to functional headless components to share business logic across
-            both new and existing UI.`,
+            `Contributed to various projects to support frontend development, including implementing new features, rebranding, 
+            and optimizing existing frontend code. Worked to refine the frontend design and code structure, ensuring a clean, 
+            cohesive, and visually appealing interface.`,
             `Joined the internship program as a mentor, providing guidance and support in frontend development 
             to ensure accurate design implementation. Helped make design concepts clear and understandable for 
             developers and encouraged effective collaboration between design and development teams.
@@ -25,7 +25,7 @@ export const getExperience: ExperienceDto[] = [
     {
         position: 'Junior Software Engineer',
         company: 'TietoEVRY',
-        startDate: new Date('2021-07-31'),
+        startDate: new Date('2021-09-01'),
         endDate: new Date('2023-06-30'),
         bulletPoints: [
             `Reassigned to a new team to provide frontend expertise. Implemented feature for managing
