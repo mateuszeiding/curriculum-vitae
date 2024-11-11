@@ -24,15 +24,15 @@ export const handlers = [
             getJsonInit
         );
     }),
-    http.get('/api/resume/list/certificate', async () => {
+    http.get('/api/resume/certificate/list', async () => {
         await delayResponse();
         return HttpResponse.json(getCertificates, getJsonInit);
     }),
-    http.get('/api/resume/list/education', async () => {
+    http.get('/api/resume/education/list', async () => {
         await delayResponse();
         return HttpResponse.json(getEducation, getJsonInit);
     }),
-    http.get('/api/resume/list/experience', async () => {
+    http.get('/api/resume/experience/list', async () => {
         await delayResponse();
         return HttpResponse.json(getExperience, getJsonInit);
     }),

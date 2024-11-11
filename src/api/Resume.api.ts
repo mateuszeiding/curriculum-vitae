@@ -15,19 +15,19 @@ export default class ResumeAPI {
 
     static async getCertificates(): Promise<CertificateDto[]> {
         return APIBase.get<CertificateDto[]>(
-            ResumeAPI.BaseUrl + '/list/certificate'
+            ResumeAPI.BaseUrl + '/certificate/list'
         );
     }
 
     static async getEducation(): Promise<EducationDto[]> {
         return APIBase.get<EducationDto[]>(
-            ResumeAPI.BaseUrl + '/list/education'
+            ResumeAPI.BaseUrl + '/education/list'
         );
     }
 
     static async getExperience(): Promise<ExperienceDto[]> {
         return APIBase.get<ExperienceDto[]>(
-            ResumeAPI.BaseUrl + '/list/experience'
+            ResumeAPI.BaseUrl + '/experience/list'
         );
     }
 }

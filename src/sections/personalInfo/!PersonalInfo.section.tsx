@@ -28,7 +28,7 @@ export default function PersonalInfo() {
                                         .replaceAll(' ', '')
                                         .replaceAll('-', '')
                             }>
-                            {import.meta.env.VITE_PHONE ?? 'phone'}
+                            {phone ?? 'phone'}
                         </a>
                     </div>
                     <div className='fs-xs'>Poland, Szczecin</div>
