@@ -7,6 +7,7 @@ $columns: 6;
     width: 210mm;
     height: 297mm;
     padding: 4rem 4rem;
+    box-sizing: border-box;
 }
 
 @media (max-width: 800px) {
@@ -53,12 +54,18 @@ $columns: 6;
 @media print {
     @page {
         size: A4;
-        margin: 1cm; /* Adjust margins to fit content within printable area */
     }
 
     @for $i from 1 to $columns + 1 {
         .col-print-#{$i} {
             @include col($i);
         }
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        box-sizing: border-box;
     }
 }
