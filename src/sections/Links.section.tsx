@@ -43,7 +43,7 @@ export default function Links() {
                             target='_blank'
                             className='d-flex'>
                             <span className='me-3 text-end'>
-                                Resume as an web app
+                                Resume as a web app
                             </span>
                             <img
                                 height={imgHeight}
