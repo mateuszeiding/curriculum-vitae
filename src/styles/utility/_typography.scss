@@ -25,6 +25,9 @@ $fs: (
 @each $key, $value in $fs {
     .fs-#{$key} {
         font-size: $value !important;
+        @if $key == 'sm' {
+            line-height: 2rem;
+        }
     }
 }
 

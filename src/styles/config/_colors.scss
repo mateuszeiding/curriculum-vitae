@@ -35,14 +35,20 @@ $colors: map.merge($grays, $blues);
             hex-to-rgb(map.get($blues, 'dark-cerulean')),
             0.1
         )};
+
+    --color-paper-bg: var(--color-ghost-white);
+
+    @media print {
+        --color-paper-bg: white;
+    }
 }
 
 @each $name, $color in $colors {
     .tx-#{$name} {
         color: var(--color-#{$name});
     }
+}
 
-    .bg-#{$name} {
-        background-color: var(--color-#{$name});
-    }
+.bg-paper {
+    background-color: var(--color-paper-bg);
 }

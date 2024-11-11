@@ -19,7 +19,7 @@ export default function Resume() {
             )}
             <main
                 ref={contentRef}
-                className='container bg-ghost-white d-flex flex-column row-gap-5'>
+                className='container bg-paper d-flex flex-column row-gap-5'>
                 <Links />
                 <PersonalInfo />
                 <Skills />

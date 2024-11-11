@@ -27,7 +27,7 @@ export default {
                         <div
                             key={i}
                             className={cls(
-                                'w-sm-25 w-lg-50 lh-1 d-flex justify-content-center ps-2 sep'
+                                'w-sm-25 w-lg-50 d-flex justify-content-center ps-2 sep'
                             )}>
                             <div className='skeleton w-75'></div>
                         </div>

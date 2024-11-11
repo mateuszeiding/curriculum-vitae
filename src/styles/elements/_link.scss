@@ -12,5 +12,6 @@ a[href] {
         text-decoration-color: var(--color-dark-blue);
         text-decoration-thickness: 1px;
         -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 }

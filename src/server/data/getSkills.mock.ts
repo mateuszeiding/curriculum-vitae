@@ -4,7 +4,7 @@ import { SkillDto } from '@/models/Skill.dto';
 export const getSkills: Record<keyof typeof SkillEnum, SkillDto> = {
     [SkillEnum.frameworks]: {
         main: ['React', 'React Router', 'Bootstrap', 'Vitest', 'Sass'],
-        secondary: ['Vue3', 'Angular2', '.NET', 'REST', 'Stencil.js'],
+        secondary: ['Vue3', 'Angular2+', '.NET', 'REST', 'Stencil.js'],
     },
     [SkillEnum.languages]: {
         main: ['Javascript', 'Typescript', 'HTML', 'CSS'],

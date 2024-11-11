@@ -7,17 +7,22 @@
 }
 
 hr {
-    border: none;
-    border-top: 1px solid var(--color-dark-cerulean);
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--color-dark-cerulean);
     width: 100%;
     position: absolute;
-    margin-top: 1.2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 1.2rem;
     z-index: 0;
 
     &.multi {
         width: calc(100% - 2rem);
+    }
+}
+
+@media print {
+    hr {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 }
 

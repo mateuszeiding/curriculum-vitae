@@ -18,7 +18,7 @@ export default function SectionHeader({
                 'row fw-medium tx-dark-cerulean',
                 type === SectionHeaderTypeEnum.reverse && 'justify-content-end'
             )}>
-            <div className='col d-flex flex-column'>
+            <div className='col mb-3 d-flex flex-column'>
                 <hr
                     className={cls(
                         type === SectionHeaderTypeEnum.reverse && 'right-0',
@@ -28,7 +28,7 @@ export default function SectionHeader({
                 />
                 <div
                     className={cls(
-                        'z-2 mb-3 bg-ghost-white flex-shrink-0',
+                        'z-2 bg-paper flex-shrink-0',
                         type === SectionHeaderTypeEnum.center &&
                             'px-4 align-self-center',
                         type === SectionHeaderTypeEnum.reverse &&
