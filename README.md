@@ -1,4 +1,4 @@
-Still in development, it's not yet pizza time :<
+🍕🍕🍕 PIZZA TIME 🍕🍕🍕
 
 [Deployed app](https://mateusz-eiding-cv.vercel.app/)
 
