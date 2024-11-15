@@ -15,11 +15,11 @@ export default function PersonalInfo() {
                     <div className='uppercase fw-medium fs-sm'>
                         Mateusz Eiding
                     </div>
-                    <div className='fs-xs d-flex flex-sm-column column-gap-3'>
+                    <div className='fs-xs d-flex flex-sm-column flex-print-row column-gap-3'>
                         <a href={email && 'mailto:' + email}>
                             {email ?? 'email'}
                         </a>
-                        <div className='v-divider d-sm-none'></div>
+                        <div className='v-divider d-sm-none d-print-block'></div>
                         <a
                             href={
                                 phone &&

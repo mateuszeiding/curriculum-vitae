@@ -15,7 +15,7 @@ export default function SectionHeader({
     return (
         <div
             className={cls(
-                'row fw-medium tx-dark-cerulean',
+                'row fw-medium tx-blue-500',
                 type === SectionHeaderTypeEnum.reverse && 'justify-content-end'
             )}>
             <div className='col mb-3 d-flex flex-column'>

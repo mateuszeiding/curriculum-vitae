@@ -1,18 +1,11 @@
+@use './../config/colors' as color;
+
 a[href] {
-    color: var(--color-dark-blue);
+    color: color.$gray-000;
+    text-decoration-color: color.$gray-000;
     text-underline-offset: 4px;
 
     &:hover {
-        color: var(--color-dark-cerulean);
-    }
-}
-
-@media print {
-    a {
-        text-decoration: underline;
-        text-decoration-color: var(--color-dark-blue);
-        text-underline-offset: 4px;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        color: color.$blue-500;
     }
 }

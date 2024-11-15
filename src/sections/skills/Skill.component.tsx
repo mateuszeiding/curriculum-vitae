@@ -33,7 +33,7 @@ export default {
                         </div>
                     ))}
                 </div>
-                <div className='w-100 d-flex justify-content-around fs-sm px-8 tx-dark-cerulean'>
+                <div className='w-100 d-flex justify-content-around fs-sm px-8 tx-blue-500'>
                     {Array.from(Array(3)).map((_, i) => (
                         <span key={i}>&bull;</span>
                     ))}
@@ -74,7 +74,7 @@ export default {
                         </span>
                     ))}
                 </div>
-                <div className='w-100 d-flex justify-content-around fs-sm px-8 tx-dark-cerulean'>
+                <div className='w-100 d-flex justify-content-around fs-sm px-8 tx-blue-500'>
                     {Array.from(Array(3)).map((_, i) => (
                         <span key={i}>&bull;</span>
                     ))}

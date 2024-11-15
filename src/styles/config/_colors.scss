@@ -1,15 +1,20 @@
 @use 'sass:map';
 @use 'sass:color';
 
+$gray-900: #f8f8ff;
+$gray-500: #8c8caa;
+$gray-000: #333333;
+
 $grays: (
-    ghost-white: #f8f8ff,
-    ghost: #ececf2,
-    light-gray: #8c8caa,
+    gray-900: $gray-900,
+    gray-500: $gray-500,
+    gray-000: $gray-000,
 );
 
+$blue-500: #0067a5;
+
 $blues: (
-    dark-blue: #00356f,
-    dark-cerulean: #0067a5,
+    blue-500: $blue-500,
 );
 
 $colors: map.merge($grays, $blues);
@@ -27,18 +32,14 @@ $colors: map.merge($grays, $blues);
         --color-#{$name}: #{$color};
     }
 
-    --color-skeleton-primary: #{rgba(
-            hex-to-rgb(map.get($grays, 'light-gray')),
-            0.1
-        )};
-    --color-skeleton-secondary: #{rgba(
-            hex-to-rgb(map.get($blues, 'dark-cerulean')),
-            0.1
-        )};
+    --color-skeleton-primary: #{rgba(hex-to-rgb($gray-500), 0.1)};
+    --color-skeleton-secondary: #{rgba(hex-to-rgb($blue-500), 0.1)};
 
-    --color-paper-bg: var(--color-ghost-white);
+    --color-paper-bg: #{$gray-900};
 
     @media print {
+        // It would decrease use of ink if we use white background
+        // we assume that we can save arount 100000$ per year by doing this
         --color-paper-bg: white;
     }
 }
