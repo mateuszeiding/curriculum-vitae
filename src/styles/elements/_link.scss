@@ -1,5 +1,6 @@
 a[href] {
     color: var(--color-dark-blue);
+    text-underline-offset: 4px;
 
     &:hover {
         color: var(--color-dark-cerulean);
@@ -10,7 +11,7 @@ a[href] {
     a {
         text-decoration: underline;
         text-decoration-color: var(--color-dark-blue);
-        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }

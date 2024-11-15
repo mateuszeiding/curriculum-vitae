@@ -10,7 +10,7 @@ $columns: 6;
     box-sizing: border-box;
 }
 
-@media (max-width: 800px) {
+@include media-query.sm() {
     .container {
         height: fit-content;
     }
