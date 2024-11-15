@@ -12,7 +12,6 @@ const createSkillPromises = () => {
 
     Object.keys(SkillEnum).forEach((skillKey: string) => {
         const key = skillKey as keyof typeof SkillEnum;
-
         skillPromises[key] = ResumeAPI.getSkills(SkillEnum[key]);
     });
 

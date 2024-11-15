@@ -1,7 +1,6 @@
 export default class APIBase {
     static async get<T>(url: string): Promise<T> {
         return fetch(url, {
-            cache: 'no-cache',
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
