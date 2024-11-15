@@ -6,7 +6,7 @@ enum ViewportSizeEnum {
 }
 
 function getViewportSize() {
-    return window.innerWidth > 800
+    return window.innerWidth > 850
         ? ViewportSizeEnum.desktop
         : ViewportSizeEnum.mobile;
 }
@@ -19,7 +19,7 @@ const createDividers = (mainId: string, secondaryId: string) => {
         if (!node) return;
 
         const children = Array.from(node.children) as HTMLElement[];
-
+        children.forEach((skill) => skill.classList.remove('sep-1'));
         children.forEach((skill, i, arr) => {
             if (
                 skill.getBoundingClientRect().y ===
