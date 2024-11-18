@@ -30,5 +30,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
   },
-  "include": ["src", "public/mockServiceWorker.js"]
+  "include": ["src", "public/mockServiceWorker.js", "public/cache-worker.js"],
 }

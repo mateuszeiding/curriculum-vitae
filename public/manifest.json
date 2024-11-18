@@ -1,0 +1,42 @@
+{
+    "image.png": {
+        "file": "assets/image-CKdJWUot.png",
+        "src": "image.png"
+    },
+    "index.html": {
+        "file": "assets/index-D3x2-pOf.js",
+        "name": "index",
+        "src": "index.html",
+        "isEntry": true,
+        "dynamicImports": ["src/server/server.ts"],
+        "css": ["assets/index-SUdZnl_I.css"],
+        "assets": [
+            "assets/github-dark-B3LxWxcL.png",
+            "assets/image-CKdJWUot.png"
+        ]
+    },
+    "node_modules/.pnpm/graphql@16.9.0/node_modules/graphql/index.mjs": {
+        "file": "assets/index-Ce00O4HT.js",
+        "name": "index",
+        "src": "node_modules/.pnpm/graphql@16.9.0/node_modules/graphql/index.mjs",
+        "isDynamicEntry": true
+    },
+    "src/assets/github-dark.png": {
+        "file": "assets/github-dark-B3LxWxcL.png",
+        "src": "src/assets/github-dark.png"
+    },
+    "src/assets/vercel-dark.png": {
+        "file": "assets/vercel-dark-BKOLUCsx.png",
+        "src": "src/assets/vercel-dark.png"
+    },
+    "src/server/server.ts": {
+        "file": "assets/server-U3Bw7Uzg.js",
+        "name": "server",
+        "src": "src/server/server.ts",
+        "isDynamicEntry": true,
+        "imports": ["index.html"],
+        "dynamicImports": [
+            "node_modules/.pnpm/graphql@16.9.0/node_modules/graphql/index.mjs"
+        ]
+    }
+}
