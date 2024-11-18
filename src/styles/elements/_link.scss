@@ -7,5 +7,6 @@ a[href] {
 
     &:hover {
         color: color.$blue-500;
+        text-decoration-color: color.$blue-500;
     }
 }
