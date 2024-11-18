@@ -31,7 +31,7 @@ self.addEventListener('install', function (event) {
                 /** @type {IndexFile} */
                 const indexFile = manifest['index.html'];
                 const serverFile = manifest[indexFile.dynamicImports[0]];
-                console.log('serverFile', serverFile);
+
                 const files = [
                     '/',
                     ...indexFile.assets,
@@ -44,7 +44,6 @@ self.addEventListener('install', function (event) {
                 caches.open(CACHE_NAME).then((cache) => {
                     return cache.addAll(files);
                 });
-                console.log(`${CACHE_NAME} installed!`);
             })
             .catch((error) => {
                 console.error('Error fetching manifest:', error);
