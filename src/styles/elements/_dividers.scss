@@ -13,11 +13,14 @@ hr {
     border-bottom: 1px solid color.$blue-500;
     width: 100%;
     position: absolute;
-    margin: 1.2rem;
     z-index: 0;
 
+    // This could be done better hmm...
+    margin: 1.2rem;
+    width: calc(100% - 1rem);
+
     &.multi {
-        width: calc(100% - 2rem);
+        width: calc(100% - 2.2rem);
     }
 }
 
