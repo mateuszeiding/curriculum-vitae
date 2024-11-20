@@ -1,9 +1,9 @@
-import ResumeAPI from '@/api/Resume.api';
-import Await from '../_shared/Await.component';
+import ResumeAPI from '@api/Resume.api';
+import Await from '@sections/_shared/Await.component';
 import Default from './Skill.component';
 import { SkillEnum } from './Skill.enum';
 import { useDeferredValue } from 'react';
-import { SkillDto } from '@/models/Skill.dto';
+import { SkillDto } from '@models/Skill.dto';
 
 const createSkillPromises = () => {
     const skillPromises: Record<SkillEnum, Promise<SkillDto>> = Object.create(

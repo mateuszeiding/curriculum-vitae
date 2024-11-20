@@ -1,10 +1,10 @@
 import { useDeferredValue } from 'react';
 
 import Default from './Education.comopnent';
-import SectionHeader from '../_shared/SectionHeader/SectionHeader.component';
+import SectionHeader from '@sections/_shared/SectionHeader/SectionHeader.component';
 
 import ResumeAPI from '@api/Resume.api';
-import Await from '../_shared/Await.component';
+import Await from '@sections/_shared/Await.component';
 
 export default function Education() {
     const education = useDeferredValue(ResumeAPI.getEducation());

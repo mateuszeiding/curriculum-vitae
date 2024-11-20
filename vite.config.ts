@@ -14,6 +14,8 @@ export default defineConfig({
             '@assets': path.resolve(__dirname, './src/assets'),
             '@api': path.resolve(__dirname, './src/api'),
             '@components': path.resolve(__dirname, './src/components'),
+            '@models': path.resolve(__dirname, './src/models'),
+            '@sections': path.resolve(__dirname, './src/sections'),
         },
     },
     css: {

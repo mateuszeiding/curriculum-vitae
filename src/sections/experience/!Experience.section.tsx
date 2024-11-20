@@ -1,8 +1,8 @@
-import SectionHeader from '@/sections/_shared/SectionHeader/SectionHeader.component';
+import SectionHeader from '@sections/_shared/SectionHeader/SectionHeader.component';
+import Await from '@sections/_shared/Await.component';
 
 import Default from './Experience.component';
-import Await from '../_shared/Await.component';
-import ResumeAPI from '@/api/Resume.api';
+import ResumeAPI from '@api/Resume.api';
 
 export default function Experience() {
     return (

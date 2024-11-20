@@ -10,10 +10,11 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
         "@assets/*": ["src/assets/*"],
         "@api/*": ["src/api/*"],
         "@components/*": ["src/components/*"],
+        "@sections/*": ["src/sections/*"],
+        "@models/*": ["src/models/*"],
     },
 
     /* Bundler mode */

@@ -1,10 +1,10 @@
-import SectionHeader from '@/sections/_shared/SectionHeader/SectionHeader.component';
-
-import Certificate from './Certificate.component';
-import ResumeAPI from '@/api/Resume.api';
-import { CertificateDto } from '@/models/Certificate.dto';
-import Await from '../_shared/Await.component';
 import { useDeferredValue } from 'react';
+
+import SectionHeader from '@sections/_shared/SectionHeader/SectionHeader.component';
+import Await from '@sections/_shared/Await.component';
+import Certificate from './Certificate.component';
+import ResumeAPI from '@api/Resume.api';
+import { CertificateDto } from '@models/Certificate.dto';
 
 export default function Certificates() {
     const certificates = useDeferredValue(ResumeAPI.getCertificates());
