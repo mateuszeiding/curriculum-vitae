@@ -1,5 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { Analytics } from '@vercel/analytics/react';
 
 import './styles/_!import.scss';
 import Resume from './Resume.tsx';
@@ -16,6 +17,7 @@ enableMocking().then(() =>
     createRoot(document.getElementById('root')!).render(
         <StrictMode>
             <Resume />
+            <Analytics />
         </StrictMode>
     )
 );
