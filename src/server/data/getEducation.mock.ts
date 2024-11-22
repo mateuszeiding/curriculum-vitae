@@ -1,4 +1,4 @@
-import { EducationDto } from '@/models/Education.dto';
+import { EducationDto } from '@models/Education.dto';
 
 export const getEducation: EducationDto[] = [
     {

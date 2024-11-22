@@ -2,7 +2,7 @@ import { delay, http, HttpResponse, HttpResponseInit } from 'msw';
 import { getCertificates } from './data/getCertificates.mock';
 import { getEducation } from './data/getEducation.mock';
 import { getExperience } from './data/getExperience.mock';
-import { SkillEnum } from '@/sections/skills/Skill.enum';
+import { SkillEnum } from '@sections/skills/Skill.enum';
 import { getSkills } from './data/getSkills.mock';
 
 const delayResponse = () =>

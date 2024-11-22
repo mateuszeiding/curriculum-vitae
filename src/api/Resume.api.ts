@@ -1,10 +1,10 @@
 import APIBase from './!APIBase';
 
-import { SkillDto } from '@/models/Skill.dto';
-import { CertificateDto } from '@/models/Certificate.dto';
-import { EducationDto } from '@/models/Education.dto';
-import { ExperienceDto } from '@/models/Experience.dto';
-import { SkillEnum } from '@/sections/skills/Skill.enum';
+import { SkillDto } from '@models/Skill.dto';
+import { CertificateDto } from '@models/Certificate.dto';
+import { EducationDto } from '@models/Education.dto';
+import { ExperienceDto } from '@models/Experience.dto';
+import { SkillEnum } from '@sections/skills/Skill.enum';
 
 export default class ResumeAPI {
     static BaseUrl = window.origin + '/api/resume';

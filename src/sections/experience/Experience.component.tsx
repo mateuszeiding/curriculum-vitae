@@ -1,7 +1,7 @@
-import { ExperienceDto } from '@/models/Experience.dto';
-import { cls } from '@/util/className';
-import { DateUtil } from '@/util/type/DateUtil';
-import { StringUtil } from '@/util/type/StringUtil';
+import { ExperienceDto } from '@models/Experience.dto';
+import { cls } from '@util/className';
+import { DateUtil } from '@util/type/DateUtil';
+import { StringUtil } from '@util/type/StringUtil';
 
 export type ExperiencePerPositionProps = ExperienceDto;
 

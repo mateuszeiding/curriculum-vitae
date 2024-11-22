@@ -1,5 +1,5 @@
-import { SkillEnum } from '@/sections/skills/Skill.enum';
-import { SkillDto } from '@/models/Skill.dto';
+import { SkillEnum } from '@sections/skills/Skill.enum';
+import { SkillDto } from '@models/Skill.dto';
 
 export const getSkills: Record<keyof typeof SkillEnum, SkillDto> = {
     [SkillEnum.frameworks]: {

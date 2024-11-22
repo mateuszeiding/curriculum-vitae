@@ -1,4 +1,4 @@
-import { CertificateDto } from '@/models/Certificate.dto';
+import { CertificateDto } from '@models/Certificate.dto';
 
 export const getCertificates: CertificateDto[] = [
     {

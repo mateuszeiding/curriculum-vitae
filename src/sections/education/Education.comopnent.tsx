@@ -1,7 +1,7 @@
-import { EducationDto } from '@/models/Education.dto';
-import { cls } from '@/util/className';
-import { DateUtil } from '@/util/type/DateUtil';
-import { StringUtil } from '@/util/type/StringUtil';
+import { EducationDto } from '@models/Education.dto';
+import { cls } from '@util/className';
+import { DateUtil } from '@util/type/DateUtil';
+import { StringUtil } from '@util/type/StringUtil';
 
 type EducationComponentProps = EducationDto;
 

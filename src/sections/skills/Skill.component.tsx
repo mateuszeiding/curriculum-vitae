@@ -1,8 +1,8 @@
-import SectionHeader from '@/sections/_shared/SectionHeader/SectionHeader.component';
-import { SectionHeaderTypeEnum } from '@/sections/_shared/SectionHeader/sectionHeaderType.enum';
-import { SkillDto } from '@/models/Skill.dto';
+import SectionHeader from '@sections/_shared/SectionHeader/SectionHeader.component';
+import { SectionHeaderTypeEnum } from '@sections/_shared/SectionHeader/sectionHeaderType.enum';
+import { SkillDto } from '@models/Skill.dto';
 
-import { cls } from '@/util/className';
+import { cls } from '@util/className';
 import { SkillEnum } from './Skill.enum';
 import { useSkillDivider } from './useSkillDivider';
 

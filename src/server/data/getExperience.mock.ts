@@ -1,4 +1,4 @@
-import { ExperienceDto } from '@/models/Experience.dto';
+import { ExperienceDto } from '@models/Experience.dto';
 
 export const getExperience: ExperienceDto[] = [
     {

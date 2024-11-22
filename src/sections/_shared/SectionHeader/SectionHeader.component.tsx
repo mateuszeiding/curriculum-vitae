@@ -1,7 +1,7 @@
 import { SectionHeaderTypeEnum } from './sectionHeaderType.enum';
 
-import { cls } from '@/util/className';
-import { StringUtil } from '@/util/type/StringUtil';
+import { cls } from '@util/className';
+import { StringUtil } from '@util/type/StringUtil';
 
 type SectionHeaderProps = {
     label: string;
