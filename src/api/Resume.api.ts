@@ -1,33 +1,27 @@
-import APIBase from './!APIBase';
+import APIBase from "./!APIBase";
 
-import { SkillDto } from '@models/Skill.dto';
-import { CertificateDto } from '@models/Certificate.dto';
-import { EducationDto } from '@models/Education.dto';
-import { ExperienceDto } from '@models/Experience.dto';
-import { SkillEnum } from '@sections/skills/Skill.enum';
+import type { CertificateDto } from "@models/Certificate.dto";
+import type { EducationDto } from "@models/Education.dto";
+import type { ExperienceDto } from "@models/Experience.dto";
+import type { SkillDto } from "@models/Skill.dto";
+import type { SkillEnum } from "@sections/skills/Skill.enum";
 
-export default class ResumeAPI {
-    static BaseUrl = window.origin + '/api/resume';
+const baseUrl = `${window.origin}/api/resume`;
 
-    static async getSkills(type: SkillEnum): Promise<SkillDto> {
-        return APIBase.get<SkillDto>(ResumeAPI.BaseUrl + '/skill/' + type);
-    }
-
-    static async getCertificates(): Promise<CertificateDto[]> {
-        return APIBase.get<CertificateDto[]>(
-            ResumeAPI.BaseUrl + '/certificate/list'
-        );
-    }
-
-    static async getEducation(): Promise<EducationDto[]> {
-        return APIBase.get<EducationDto[]>(
-            ResumeAPI.BaseUrl + '/education/list'
-        );
-    }
-
-    static async getExperience(): Promise<ExperienceDto[]> {
-        return APIBase.get<ExperienceDto[]>(
-            ResumeAPI.BaseUrl + '/experience/list'
-        );
-    }
+async function getSkills(type: SkillEnum): Promise<SkillDto> {
+	return APIBase.get<SkillDto>(`${baseUrl}/skill/${type}`);
 }
+
+async function getCertificates(): Promise<CertificateDto[]> {
+	return APIBase.get<CertificateDto[]>(`${baseUrl}/certificate/list`);
+}
+
+async function getEducation(): Promise<EducationDto[]> {
+	return APIBase.get<EducationDto[]>(`${baseUrl}/education/list`);
+}
+
+async function getExperience(): Promise<ExperienceDto[]> {
+	return APIBase.get<ExperienceDto[]>(`${baseUrl}/experience/list`);
+}
+
+export default { getSkills, getCertificates, getEducation, getExperience };

@@ -1,36 +1,32 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2021", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "types": [
-      "node"
-    ],
-    "baseUrl": ".",
-    "paths": {
-        "@assets/*": ["src/assets/*"],
-        "@api/*": ["src/api/*"],
-        "@components/*": ["src/components/*"],
-        "@sections/*": ["src/sections/*"],
-        "@models/*": ["src/models/*"],
-        "@util/*": ["src/util/*"],
-    },
+	"compilerOptions": {
+		"target": "ES2020",
+		"useDefineForClassFields": true,
+		"lib": ["ES2021", "DOM", "DOM.Iterable"],
+		"module": "ESNext",
+		"skipLibCheck": true,
+		"types": ["node"],
+		"baseUrl": ".",
+		"paths": {
+			"@assets/*": ["src/assets/*"],
+			"@api/*": ["src/api/*"],
+			"@components/*": ["src/components/*"],
+			"@sections/*": ["src/sections/*"],
+			"@models/*": ["src/models/*"],
+			"@util/*": ["src/util/*"]
+		},
 
-    /* Bundler mode */
-    "moduleResolution": "Bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
+		"moduleResolution": "Bundler",
+		"allowImportingTsExtensions": true,
+		"isolatedModules": true,
+		"moduleDetection": "force",
+		"noEmit": true,
+		"jsx": "react-jsx",
 
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-  },
-  "include": ["src", "public/mockServiceWorker.js", "public/cache-worker.js"],
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true
+	},
+	"include": ["src", "public/mockServiceWorker.js", "public/cache-worker.js"]
 }

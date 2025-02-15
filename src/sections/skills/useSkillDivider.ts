@@ -1,60 +1,61 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from "react";
 
 enum ViewportSizeEnum {
-    desktop = 'desktop',
-    mobile = 'mobile',
+	desktop = "desktop",
+	mobile = "mobile",
 }
 
 function getViewportSize() {
-    return window.innerWidth > 850
-        ? ViewportSizeEnum.desktop
-        : ViewportSizeEnum.mobile;
+	return window.innerWidth > 850
+		? ViewportSizeEnum.desktop
+		: ViewportSizeEnum.mobile;
 }
 
 const createDividers = (mainId: string, secondaryId: string) => {
-    const mainNode = document.getElementById(mainId);
-    const secondaryNode = document.getElementById(secondaryId);
+	const mainNode = document.getElementById(mainId);
+	const secondaryNode = document.getElementById(secondaryId);
 
-    [mainNode, secondaryNode].forEach((node) => {
-        if (!node) return;
+	for (const node of [mainNode, secondaryNode]) {
+		if (!node) return;
 
-        const children = Array.from(node.children) as HTMLElement[];
-        children.forEach((skill) => skill.classList.remove('sep-1'));
-        children.forEach((skill, i, arr) => {
-            if (
-                skill.getBoundingClientRect().y ===
-                arr[i + 1]?.getBoundingClientRect().y
-            ) {
-                skill.classList.add('sep-1');
-            }
-        });
-    });
+		const children = Array.from(node.children) as HTMLElement[];
+		for (const [index, child] of children.entries()) {
+			child.classList.remove("sep-1");
+
+			if (
+				child.getBoundingClientRect().y ===
+				children[index + 1]?.getBoundingClientRect().y
+			) {
+				child.classList.add("sep-1");
+			}
+		}
+	}
 };
 
 export const useSkillDivider = (title: string) => {
-    const [viewportSize, setViewportSize] = useState(() => getViewportSize());
+	const [viewportSize, setViewportSize] = useState(() => getViewportSize());
 
-    const ids = useMemo(
-        () => ({
-            mainId: ['skill', title, 'main'].join('_'),
-            secondaryId: ['skill', title, 'secondary'].join('_'),
-        }),
-        [title]
-    );
+	const ids = useMemo(
+		() => ({
+			mainId: ["skill", title, "main"].join("_"),
+			secondaryId: ["skill", title, "secondary"].join("_"),
+		}),
+		[title],
+	);
 
-    useEffect(() => {
-        const observer = new ResizeObserver(() => {
-            if (viewportSize === getViewportSize()) return;
+	useEffect(() => {
+		const observer = new ResizeObserver(() => {
+			if (viewportSize === getViewportSize()) return;
 
-            createDividers(ids.mainId, ids.secondaryId);
-            setViewportSize(getViewportSize());
-        });
+			createDividers(ids.mainId, ids.secondaryId);
+			setViewportSize(getViewportSize());
+		});
 
-        observer.observe(document.body);
-        createDividers(ids.mainId, ids.secondaryId);
+		observer.observe(document.body);
+		createDividers(ids.mainId, ids.secondaryId);
 
-        return () => observer.disconnect();
-    }, [ids, viewportSize]);
+		return () => observer.disconnect();
+	}, [ids, viewportSize]);
 
-    return ids;
+	return ids;
 };

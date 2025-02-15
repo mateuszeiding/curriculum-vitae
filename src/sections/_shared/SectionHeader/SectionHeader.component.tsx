@@ -1,44 +1,42 @@
-import { SectionHeaderTypeEnum } from './sectionHeaderType.enum';
+import { SectionHeaderTypeEnum } from "./sectionHeaderType.enum";
 
-import { cls } from '@util/className';
-import { StringUtil } from '@util/type/StringUtil';
+import { cls } from "@util/className";
+import { StringUtil } from "@util/type/StringUtil";
 
 type SectionHeaderProps = {
-    label: string;
-    type?: SectionHeaderTypeEnum;
+	label: string;
+	type?: SectionHeaderTypeEnum;
 };
 
 export default function SectionHeader({
-    label,
-    type = SectionHeaderTypeEnum.normal,
+	label,
+	type = SectionHeaderTypeEnum.normal,
 }: Readonly<SectionHeaderProps>) {
-    return (
-        <div
-            className={cls(
-                'row fw-medium tx-blue-500',
-                type === SectionHeaderTypeEnum.reverse && 'justify-content-end'
-            )}>
-            <div className='col mb-3 d-flex flex-column'>
-                <hr
-                    className={cls(
-                        type === SectionHeaderTypeEnum.reverse && 'right-0',
-                        type === SectionHeaderTypeEnum.center &&
-                            'left-0 right-0 multi'
-                    )}
-                />
-                <div
-                    className={cls(
-                        'z-2 bg-paper flex-shrink-0',
-                        type === SectionHeaderTypeEnum.center &&
-                            'px-4 align-self-center',
-                        type === SectionHeaderTypeEnum.reverse &&
-                            'ps-4 align-self-end',
-                        type === SectionHeaderTypeEnum.normal &&
-                            'pe-4 align-self-start'
-                    )}>
-                    {StringUtil.capitalizeFirstLetter(label)}
-                </div>
-            </div>
-        </div>
-    );
+	return (
+		<div
+			className={cls(
+				"row fw-medium tx-blue-500",
+				type === SectionHeaderTypeEnum.reverse && "justify-content-end",
+			)}
+		>
+			<div className="col mb-3 d-flex flex-column">
+				<hr
+					className={cls(
+						type === SectionHeaderTypeEnum.reverse && "right-0",
+						type === SectionHeaderTypeEnum.center && "left-0 right-0 multi",
+					)}
+				/>
+				<div
+					className={cls(
+						"z-2 bg-paper flex-shrink-0",
+						type === SectionHeaderTypeEnum.center && "px-4 align-self-center",
+						type === SectionHeaderTypeEnum.reverse && "ps-4 align-self-end",
+						type === SectionHeaderTypeEnum.normal && "pe-4 align-self-start",
+					)}
+				>
+					{StringUtil.capitalizeFirstLetter(label)}
+				</div>
+			</div>
+		</div>
+	);
 }

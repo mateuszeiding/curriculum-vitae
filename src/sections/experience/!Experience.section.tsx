@@ -1,28 +1,31 @@
-import SectionHeader from '@sections/_shared/SectionHeader/SectionHeader.component';
-import Await from '@sections/_shared/Await.component';
+import Await from "@sections/_shared/Await.component";
+import SectionHeader from "@sections/_shared/SectionHeader/SectionHeader.component";
 
-import Default from './Experience.component';
-import ResumeAPI from '@api/Resume.api';
+import ResumeAPI from "@api/Resume.api";
+import { useDeferredValue } from "react";
+import Default from "./Experience.component";
 
 export default function Experience() {
-    return (
-        <section className='p-relative'>
-            <SectionHeader label='Experience' />
-            <Await
-                promise={ResumeAPI.getExperience()}
-                fallback={<Default.Skeleton />}
-                resolver={(experience) =>
-                    experience.map((experience, i, arr) => (
-                        <Default.Component
-                            key={i}
-                            {...experience}
-                            {...(arr[i - 1]?.company === experience.company && {
-                                ...{ company: '' },
-                            })}
-                        />
-                    ))
-                }
-            />
-        </section>
-    );
+	const experience = useDeferredValue(ResumeAPI.getExperience());
+
+	return (
+		<section className="p-relative">
+			<SectionHeader label="Experience" />
+			<Await
+				promise={experience}
+				fallback={<Default.Skeleton />}
+				resolver={(experience) =>
+					experience.map((experience, i, arr) => (
+						<Default.Component
+							key={experience.company + experience.position}
+							{...experience}
+							{...(arr[i - 1]?.company === experience.company && {
+								...{ company: "" },
+							})}
+						/>
+					))
+				}
+			/>
+		</section>
+	);
 }

@@ -1,17 +1,17 @@
 interface ICertificateDto {
-    name: string;
-    startDate: Date;
-    link?: string;
-    endDate?: Date;
+	name: string;
+	startDate: Date;
+	link?: string;
+	endDate?: Date;
 }
 
 export class CertificateDto implements ICertificateDto {
-    name: string = '';
-    startDate: Date = new Date();
-    link?: string;
-    endDate?: Date;
+	name = "";
+	startDate: Date = new Date();
+	link?: string;
+	endDate?: Date;
 
-    constructor(object: Partial<ICertificateDto>) {
-        Object.assign(this, object);
-    }
+	constructor(object: Partial<ICertificateDto>) {
+		Object.assign(this, object);
+	}
 }
