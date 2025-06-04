@@ -8,10 +8,10 @@ export const getSkills: Record<keyof typeof SkillEnum, SkillDto> = {
 	},
 	[SkillEnum.languages]: {
 		main: ["Javascript", "Typescript", "HTML", "CSS"],
-		secondary: ["C#", "T-SQL"],
+		secondary: ["C#", "T-SQL", "Rust"],
 	},
 	[SkillEnum.tools]: {
-		main: ["Vite", "Figma", "Zod", "Docker", "ESLint", "Git"],
+		main: ["Vite", "Figma", "Zod", "Docker", "ESLint", "Git", "Vim motions"],
 		secondary: ["Azure DevOps", "Webpack", "Storybook", "NPM Registry"],
 	},
 };

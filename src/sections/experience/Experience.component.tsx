@@ -61,10 +61,11 @@ export default {
 						"fw-regular text-lg-end text-print-end text-sm-start",
 					)}
 				>
-					{StringUtil.range(
-						DateUtil.to2digMMNumericYYYY(startDate),
-						!endDate ? "Current" : DateUtil.to2digMMNumericYYYY(endDate),
-					)}
+					{startDate &&
+						StringUtil.range(
+							DateUtil.to2digMMNumericYYYY(startDate),
+							!endDate ? "Current" : DateUtil.to2digMMNumericYYYY(endDate),
+						)}
 				</div>
 			</div>
 			<div className="row">

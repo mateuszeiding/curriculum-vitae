@@ -6,6 +6,8 @@ export const getExperience: ExperienceDto[] = [
 		company: "TietoEVRY",
 		startDate: new Date("2023-07-01"),
 		bulletPoints: [
+			`Redesigned and optimized validation logic for recurring medication dosages with varying repetition patterns to prevent
+			scheduling conflicts.`,
 			`Managed refactoring and rebranding of an application for task management. Moved most internal data states to
             loaders and routes to provide a more cloud-friendly solution and reduce prop drilling. Simplifications across
             the project resulted in ~30% code reduction.
@@ -43,5 +45,11 @@ export const getExperience: ExperienceDto[] = [
 		bulletPoints: [
 			"Collaborated within a team of 10 interns on an internal application for gathering analytics data.",
 		],
+	},
+	{
+		position: "Other",
+		company: "TietoEVRY",
+		startDate: null,
+		bulletPoints: ["Solved most of 2024 Advent of Code challenges in Rust."],
 	},
 ];

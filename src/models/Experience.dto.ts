@@ -1,7 +1,7 @@
 interface IExperienceDto {
 	position: string;
 	company: string;
-	startDate: Date;
+	startDate: Date | null;
 	endDate?: Date;
 	bulletPoints: string[];
 }
@@ -9,7 +9,7 @@ interface IExperienceDto {
 export class ExperienceDto implements IExperienceDto {
 	position = "";
 	company = "";
-	startDate: Date = new Date();
+	startDate: Date | null = new Date();
 	endDate?: Date = new Date();
 	bulletPoints: string[] = [];
 

@@ -19,7 +19,7 @@ export default function SectionHeader({
 				type === SectionHeaderTypeEnum.reverse && "justify-content-end",
 			)}
 		>
-			<div className="col mb-3 d-flex flex-column">
+			<div className="col mb-2 d-flex flex-column">
 				<hr
 					className={cls(
 						type === SectionHeaderTypeEnum.reverse && "right-0",

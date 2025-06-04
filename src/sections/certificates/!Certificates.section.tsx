@@ -11,7 +11,7 @@ export default function Certificates() {
 
 	return (
 		<section className="p-relative">
-			<SectionHeader label="certrificates" />
+			<SectionHeader label="certificates" />
 			<Await
 				fallback={<Certificate.Skeletion />}
 				promise={certificates}
