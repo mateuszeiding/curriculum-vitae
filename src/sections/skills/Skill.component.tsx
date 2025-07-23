@@ -71,9 +71,9 @@ export default {
 						</span>
 					))}
 				</div>
-				<div className="w-100 d-flex justify-content-around fs-sm px-8 tx-blue-500">
+				<div className="w-100 d-flex justify-content-around fs-sm lh-1 px-8 tx-blue-500">
 					{Array.from({ length: 3 }, (_, i) => i + 1).map((v) => (
-						<span key={v}>&bull;</span>
+						<span key={v}>&ndash;</span>
 					))}
 				</div>
 				<div
