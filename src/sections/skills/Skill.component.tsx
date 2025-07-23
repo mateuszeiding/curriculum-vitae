@@ -63,7 +63,7 @@ export default {
 				<SectionHeader label={title} type={SectionHeaderTypeEnum.center} />
 				<div
 					id={mainId}
-					className="fs-sm d-flex flex-wrap gap-2 justify-content-center"
+					className="fs-xs d-flex flex-wrap gap-2 justify-content-center"
 				>
 					{main?.sort().map((val) => (
 						<span key={val} className="sep px-2">
