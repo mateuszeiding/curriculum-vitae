@@ -44,7 +44,7 @@ export default {
 		endDate,
 		bulletPoints,
 	}: Readonly<ExperiencePerPositionProps>) => (
-		<div className="mb-4">
+		<div className="mb-3">
 			<div className="row fs-sm fw-medium">
 				<div className="col-lg-2 col-print-2 col-sm-3">{position}</div>
 				<div

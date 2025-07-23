@@ -22,10 +22,6 @@ export const getExperience: IExperienceInput[] = [
 				emphasis: ["Managed refactoring", "~30% code reduction"],
 			},
 			{
-				value: `Contributed to various frontend projects, implementing new features, rebranding, and optimizing code. Refined 
-            design and structure for a cleaner, cohesive, and appealing interface.`,
-			},
-			{
 				value: `Joined the internship program as a mentor, providing guidance and support in frontend development 
             to ensure accurate design implementation. Helped make design concepts clear and understandable for 
             developers and encouraged effective collaboration between design and development teams.
@@ -41,6 +37,13 @@ export const getExperience: IExperienceInput[] = [
             built libraries that include a style framework, web components, and font-glyphs that were
             later used in over 20 projects.`,
 				emphasis: ["department-wide design system", "over 20 projects"],
+			},
+			{
+				value: `Refactored backend structure by cleaning up endpoint definitions, route naming, HTTP methods, and response 
+				codes in the main API. Introduced an abstract service manager to resolve context-specific services in a CQRS-based 
+				setup. Also redesigned and consolidated DTOs and interfaces to improve consistency, reduce duplication, and make 
+				the codebase easier to work with.`,
+				emphasis: ["redesigned and consolidated DTOs", "Refactored"],
 			},
 		],
 	},
@@ -62,7 +65,7 @@ export const getExperience: IExperienceInput[] = [
 			},
 			{
 				value:
-					"Developed a .NET REST API for the Oslo municipality, enabling seamless integration by external systems",
+					"Developed a .NET REST API for the Oslo municipality, enabling external systems to integrate seamlessly.",
 			},
 		],
 	},
@@ -79,13 +82,18 @@ export const getExperience: IExperienceInput[] = [
 		],
 	},
 	{
-		position: "Other",
+		position: "Personal",
 		company: "TietoEVRY",
 		startDate: null,
 		bulletPoints: [
 			{
 				value: "Solved most of 2024 Advent of Code challenges in Rust.",
 				emphasis: ["Rust"],
+			},
+			{
+				value:
+					"Currently learning cybersecurity through TryHackMe structured learning paths",
+				emphasis: ["cybersecurity"],
 			},
 		],
 	},
