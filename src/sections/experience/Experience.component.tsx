@@ -1,4 +1,4 @@
-import type { ExperienceDto } from "@models/Experience.dto";
+import type { ExperienceDto } from "@models/Experience/!Experience.dto";
 import { cls } from "@util/className";
 import DateUtil from "@util/type/DateUtil";
 import StringUtil from "@util/type/StringUtil";
@@ -72,7 +72,7 @@ export default {
 				<div className="col-6">
 					<ul>
 						{bulletPoints.map((bulletPoint) => (
-							<li key={window.crypto.randomUUID()}>{bulletPoint}</li>
+							<li key={window.crypto.randomUUID()}>{bulletPoint.Value}</li>
 						))}
 					</ul>
 				</div>

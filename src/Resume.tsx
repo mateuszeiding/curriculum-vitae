@@ -21,7 +21,7 @@ export default function Resume() {
 			)}
 			<main
 				ref={contentRef}
-				className="container bg-paper d-flex flex-column row-gap-4"
+				className="container bg-paper d-flex flex-column row-gap-3"
 			>
 				<Links />
 				<PersonalInfo />

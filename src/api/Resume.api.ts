@@ -2,7 +2,10 @@ import APIBase from "./!APIBase";
 
 import type { CertificateDto } from "@models/Certificate.dto";
 import type { EducationDto } from "@models/Education.dto";
-import type { ExperienceDto } from "@models/Experience.dto";
+import {
+	ExperienceDto,
+	type IExperienceInput,
+} from "@models/Experience/!Experience.dto";
 import type { SkillDto } from "@models/Skill.dto";
 import type { SkillEnum } from "@sections/skills/Skill.enum";
 
@@ -21,7 +24,9 @@ async function getEducation(): Promise<EducationDto[]> {
 }
 
 async function getExperience(): Promise<ExperienceDto[]> {
-	return APIBase.get<ExperienceDto[]>(`${baseUrl}/experience/list`);
+	const promise = APIBase.get<IExperienceInput[]>(`${baseUrl}/experience/list`);
+
+	return promise.then((v) => v.map((e) => new ExperienceDto(e)));
 }
 
 export default { getSkills, getCertificates, getEducation, getExperience };
