@@ -28,8 +28,15 @@ export const getSkills: Record<keyof typeof SkillEnum, SkillDto> = {
 			"ESLint",
 			"SonarQube",
 			"StoryBook",
-			"Swagger",
+			"MSW",
 		],
-		secondary: ["Vim motions", "Docker", "NPM Registry", "WSL", "Biome.js"],
+		secondary: [
+			"Vim motions",
+			"Docker",
+			"Swagger",
+			"NPM Registry",
+			"WSL",
+			"Biome.js",
+		],
 	},
 };
